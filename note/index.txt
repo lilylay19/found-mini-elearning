@@ -1,0 +1,14 @@
+index is find default of web page.
+construction of web page. (research)
+element in html have open tag content close tag. ex <h1>hello world</h1>
+what is meta data?
+what is ip
+what is cdn
+tmr cher check
+There are 2 specific file path in html that mostly used:
+- absolute : (link address)
+- relative : (root project , drive D/C)
+how many dote . ?
+static page use relative
+dynamic page use absolute
+

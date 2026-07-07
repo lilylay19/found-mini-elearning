@@ -1,0 +1,77 @@
+
+//day 1 html
+
+index is find default of web page.
+construction of web page. (research)
+element in html have open tag content close tag. ex <h1>hello world</h1>
+what is meta data?
+what is ip
+what is cdn
+tmr cher check
+There are 2 source file path in html that mostly used:
+- absolute : (link address)
+- relative : (root project , drive D/C)
+how many dote . ?
+static page use relative
+dynamic page use absolute
+
+//day 2 html
+
+we can derive icon by 2 way:
+- html cdn : to use it we need to link font-awesome cdn.
+- svg : just copy dak (if some part lose it will break picture).
+block and inline
+block : alway start a new line, ans browser automatically add some space.
+inline : 
+layout
+semantic tags : have 2 type :
+none-semantic : div and span - tell nothing about its content.
+semantic element : <form> , <table> , ...
+benefits :
+search engine will consider 
+
+//day 3 html
+
+link mean 2 type that we can use :
+- hyper link : clckable link <a>
+- link tag : header , cannot click url , src , href
+rel = relation
+table
+
+//asong day 4 html and css 
+
+//day 5 css
+what is propotei and what is value 
+propotie is identifire or name 
+value is vlaue give for propotie
+ review 
+
+ today 
+ selector has 5type
+ {
+    * universal selector
+    body selector
+    class selector
+    id selector
+    group selector
+
+ }
+ pseudo
+ 1. pseudo-class (: pseudo-class)=>(require action) ex : :hover , :nth-child , :active , visit ,...
+ 2. pseudo-element (::)=>(no action) ex: ::first-letter , ::before , ::after , ::placeholder , ...
+ 
+ 5 type of font-family :
+ - San-serif family
+ - Monospace
+ - Cursive 
+ - fantasy font
+ - serif    
+ // day 6 css
+ box model 3things important
+ margin : space between border and parent or viewport
+ border : plach between padding and margin
+ padding : space between content and border
+
+?? dayy 7 css layout have 7 component:
+1. normal flow : 
+2. flex-box : flexbox is a kind of 1d which control the full layout of flex items

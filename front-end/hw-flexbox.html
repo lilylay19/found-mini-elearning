@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box homework</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        h1{
+            margin: 20px;
+            font-size: 3em;
+        }
+        .menu{
+            width: 70%;
+            display: flex;
+            list-style: none;
+            margin-top: 30px;
+            background-color: aqua;
+            justify-content: center;
+            border-radius: 9px;
+        }
+        .menu li{
+            padding: 15px 30px;
+            color: blueviolet;
+            list-style: none;
+        }
+        .menu li.active{
+            padding:15px 20px;
+            color: rgb(242, 245, 247);
+            background-color: blue;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            background-color: aqua;
+            border-radius: 20px;
+        }
+        .picture{
+            display: flex;
+            margin-top: 20px;
+        }
+        .picture li{
+            padding: 23px;
+            color: blueviolet;
+            list-style: none;
+         }
+    </style>
+</head>
+<body>
+    <h1>Most Popular Courses</h1>
+    <p>Choose from hundreds of courses from specislist organizations</p>
+    <ul class="menu">
+        <li class="active">Web Design</li>
+        <li>Development</li>
+        <li>Graphic Design</li>
+        <li>Marketing</li>
+        <li>Finance</li>
+    </ul>
+    <ul class="picture">
+        <li><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c5/3c/66/c53c669c-f869-2b12-a883-c5fdd7e9530b/app.png/1200x630bb.png" alt=""></li>
+        <li><img src="https://www.freeiconspng.com/uploads/adobe-photoshop-icon-25.png" alt=""></li>
+        <li><img src="https://s3-alpha.figma.com/hub/file/479066114/4e60317b-e1cd-44fd-adfb-9d225a561fd4-cover.png" alt=""></li>
+        <li><img src="https://www.nicepng.com/png/detail/222-2224770_react-native-icon-png.png" alt=""></li>
+    </ul>
+</body>
+</html>

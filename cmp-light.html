@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Complete Course - CodePath</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<style type="text/tailwindcss">
+      @theme {
+      --color-primary: rgba(108, 158, 27, 1);
+      --color-secondary: rgba(51, 77, 8, 1);
+    }
+      body { font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-white-200 text-gray-200">
+  <div class="max-w-6xl mx-auto px-10">
+    <!-- Breadcrumb -->
+    <div class="text-sm text-gray-400 py-4 flex items-center gap-1 ml-1">
+      <a href="#" class="text-black">Home</a>
+      <span>&gt;</span>
+      <a href="#" class="text-black">Library</a>
+      <span>&gt;</span>
+      <span class="text-green-500 text-bold ">Java</span>
+    </div>
+    <!-- Hero Card -->
+    <div class="relative bg-primary rounded-xl p-10 overflow-hidden mb-8">
+      <span class="absolute top-5 left-6 bg-secondary text-md font-semibold px-3 py-2 text-center rounded cursor-pointer">Best Seller</span>
+      <span class="absolute top-5 right-6 bg-none border-1 rounded text-white text-md font-semibold px-3 py-2 rounded cursor-pointer">8.5 Hours</span>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-2 ml-50">
+        <!-- Logo/Title -->
+        <div class="flex flex-col items-center text-center mb-10 min-w-[200px]">
+          <div class="text-6xl "><img src="./download (1).png" width="200" height="200" alt="Java Logo"></div>
+          <div class=" text-white font-bold tracking-wide text-2xl">Complete Course</div>
+        </div>
+
+        <!-- Description -->    
+        <div class="flex-1 text-white">
+          <p class="text-lg leading-relaxed max-w-md">
+            Learn core Java concept and build real-world applications with hands-on projects.
+            Learn this courses now. Discount it waiting for you.
+          </p>
+          <div class="flex items-center gap-3 mt-5">
+            <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-black font-bold"><img src="./wallpapersden.com_anonymous-4k-rain-design_3840x2160.jpg" alt="Instructor" class="w-full h-full object-cover"></div>
+            <div>
+              <div class="font-semibold text-white">Jonh Smith</div>
+              <div class="text-sm text-gray-200/80">Senior Software Engineer</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mt-3 mb-3 text-sm text-gray-100">
+            <span class="text-yellow-400">★★★☆</span>
+            <span>4.8 (2.3k reviews) &nbsp;|&nbsp; 23.6k students enrolled</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enroll button -->
+      <button class="absolute bottom-6 left-6 bg-secondary hover:bg-lime-700 cursor-pointer transition text-white font-semibold px-5 py-2.5 rounded-md">
+        Enroll Now - $49.99
+      </button>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-primary border border-primary rounded-xl mb-8">
+      <div class="p-5 text-center">
+        <div class="font-semibold text-black">23.5 Hours</div>
+        <div class="text-sm text-primary">On-demand video</div>
+      </div>
+      <div class="p-5 text-center">
+        <div class="font-semibold text-black">160 Lectures</div>
+        <div class="text-sm text-primary">Full lifetime access</div>
+      </div>
+      <div class="p-5 text-center">
+        <div class="font-semibold text-black">Certificate</div>
+        <div class="text-sm text-primary">Shareable</div>
+      </div>
+      <div class="p-5 text-center">
+        <div class="font-semibold text-black">Beginner to Advanced</div>
+        <div class="text-sm text-primary">All levels</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="grid grid-cols-5 border border-primary rounded-xl overflow-hidden mb-8">
+      <div class="text-center py-3 font-medium text-black border-r border-primary cursor-pointer">Overview</div>
+      <div class="text-center py-3 font-medium text-secondary border-r border-primary cursor-pointer">Curriculum</div>
+      <div class="text-center py-3 font-medium text-black border-r border-primary cursor-pointer">Reviews</div>
+      <div class="text-center py-3 font-medium text-black border-r border-primary cursor-pointer">Instructor</div>
+      <div class="text-center py-3 font-medium text-black cursor-pointer">FAQs</div>
+    </div>
+
+    <!-- Content: Curriculum + Sidebar -->
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 pb-16">
+
+      <!-- Curriculum -->
+      <div>
+        <div class="flex items-center justify-between mb-1">
+          <h2 class="text-2xl font-bold text-primary">Course Curriculum</h2>
+          <button class="text-sm text-red-600 hover:text-red-700">Expand All</button>
+        </div>
+        <p class="text-sm text-gray-500 ml-1 mb-4">33 Sections , 160 Lectures , 23.5 Hours</p>
+
+        <div class="space-y-3">
+          <!-- Section item template -->
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">1. Introductions To Java</div>
+              <div class="text-sm text-gray-500">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">2. Java Basics</div>
+              <div class="text-sm text-gray-500">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">3. Object Oriented Programming</div>
+              <div class="text-sm text-gray-500">10 Lectures 1h 30m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">4. Exception Handling</div>
+              <div class="text-sm text-gray-500">14 Lectures 1h 45m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">5. Collections Framework</div>
+              <div class="text-sm text-gray-500">16 Lectures 2h 20m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">6. Multithreading</div>
+              <div class="text-sm text-gray-500">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">7. File Handling &amp; I / O</div>
+              <div class="text-sm text-gray-500">10 Lectures 1h 15m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-primary rounded-lg px-5 py-4 flex items-center justify-between cursor-pointer hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-secondary">8. Advanced Tipic</div>
+              <div class="text-sm text-gray-500">10 Lectures 1h 15m</div>
+            </div>
+            <span class="text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="mt-18 h-120 border-1 rounded-xl bg-white/[0.5] p-5">
+        <h3 class="text-primary     text-center font-semibold mb-8 text-2xl">Popular Articles</h3>
+        <div class="space-y-4">
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-yellow-500 flex items-center justify-center text-black font-bold text-sm">JS</div>
+            <div>
+              <div class="text-sm font-medium text-black leading-snug">Top 10 JavaScript Array Methods</div>
+              <div class="text-xs text-gray-500">8 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-blue-500 flex items-center justify-center text-black font-bold text-sm"><img src="./phyton.webp" alt=""></div>
+            <div>
+              <div class="text-sm font-medium text-black leading-snug">Python Decorators Explained</div>
+              <div class="text-xs text-gray-500">7 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-11.5 h-9 rounded-md bg-purple-500 flex items-center justify-center text-black font-bold text-sm">CSS</div>
+            <div>
+              <div class="text-sm font-medium text-black leading-snug">CSS Grid Vs Flexbox: When to use what</div>
+              <div class="text-xs text-gray-500">9 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-orange-600 flex items-center justify-center text-black font-bold text-sm">GIT</div>
+            <div>
+              <div class="text-sm font-medium text-black leading-snug">Git commands Every developer...</div>
+              <div class="text-xs text-gray-500">7 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-green-500 flex items-center justify-center text-black font-bold text-sm">&lt;/&gt;</div>
+            <div>
+              <div class="text-sm font-medium text-black leading-snug">Clean Code Principles for Beginners</div>
+              <div class="text-xs text-gray-500">6 min read</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="inline-block mt-5 text-sm text-primary hover:text-secondary font-medium">View All Categories &gt;</a>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>

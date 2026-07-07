@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hw-flexbox">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/front-end/hw-flexbox.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
