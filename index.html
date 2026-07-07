@@ -1,13 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/input.css">
-    <link rel="stylesheet" href="./src/output.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/input.css">
+  <link rel="stylesheet" href="./src/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./src/js/component/nav.js" defer></script>
+    <link rel="stylesheet" href="../src/page/nav.html">
+  <title>Document</title>
 </head>
-<body>
-    <h1 class="text-primary">This is Home page</h1>  
+
+<body class="">
+
+  <header>
+    <nav id="site-nav"></nav>
+  </header>
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+
+    <div class="relative max-w-3xl mx-auto text-center px-6 pt-10 pb-16">
+      <h2 class="text-3xl sm:text-5xl font-semibold text-primary ">
+        Master Code <br><span>Create <span class="text-secondary "> Tomorrow</span></span>
+      </h2>
+      <p class="mt-5 text-secondary max-w-xl mx-auto text-[20px]">
+        Learn from industry experts and build real-world projects. Start your coding journey today.
+      </p>
+      <div class="flex items-center gap-2 bg-white rounded-full border border-secondary-4 shadow-sm px-2 py-2 mt-8  ">
+        <input type="text" placeholder="Search for courses, keywords, topics..."
+          class="flex-1 bg-transparent text-sm outline-none placeholder:text-gray-300" />
+      </div>
+
+
+      <div class="mt-8 flex  items-center justify-center  gap-x-15 gap-y- text-[20px]">
+
+        <div class="flex items-center gap-4">
+          <div class="w-13 h-13 rounded-xl border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-book grid gid- text-primary text-[25px] "></i>
+          </div>
+
+          <div class="flex flex-col">
+            <span class=" text-primary font-semibold mr-7">10K+</span>
+            <span class=" text-secondary font-semibold">Courses</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="w-13 h-13 rounded-xl border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-graduation-cap text-primary text-[25px] "></i>
+          </div>
+          <div class="flex flex-col">
+            <span class=" text-primary font-semibold mr-7">500K+</span>
+            <span class=" text-secondary font-semibold">Students</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-13 h-13 rounded-xl border-2 border-primary flex items-center justify-center bg-secondary-2">
+              <i class="fa-solid fa-trophy text-primary text-[25px]"></i>
+
+            </div>
+            <div class="flex flex-col">
+              <span class=" text-primary font-semibold mr-7">200K+</span>
+              <span class=" text-secondary font-semibold">Projects</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-13 h-13 rounded-xl border-2 border-primary flex items-center justify-center bg-secondary-2">
+              <i class="fa-solid fa-star text-primary text-[25px]"></i>
+
+            </div>
+           
+            <div class="flex flex-col">
+              <span class=" text-primary font-semibold mr-7">200K+</span>
+              <span class=" text-secondary font-semibold">Projects</span>
+            </div>
+          </div>
+
+  </section>
+
+
+  <!-- FEATURE STRIP -->
+  <section class="max-w-7xl mx-auto px-6 -mt-2 mb-20">
+    <div class="bg-primary rounded-xl px-6 py-6 sm:px-10 sm:py-8 shadow-lg">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-white">
+        
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">
+            <i class="fa-solid fa-graduation-cap text-secondary-2 text-[25px] "></i>
+          </span>
+          <div>
+            <p class="font-semibold text-[18px]">Expert-Led Courses</p>
+            <p class="text-[15px]">Taught by industry professionals</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">
+            <i class="fa-solid fa-bell text-secondary-2"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-[18px]">Real-World Projects</p>
+            <p class="text-[15px]">Build a portfolio for your career</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">
+            <i class="fa-solid fa-mobile text-secondary-2"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-[18px]">Learn Anywhere</p>
+            <p class="text-[15px]">Access on any device, anytime</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">
+            <i class="fa-brands fa-wpforms text-secondary-2"></i>
+          </span>
+          <div>
+            <p class="font-semibold text-[18px]">Certificate of Completion</p>
+            <p class="text-[15px] ">Earn a certificate when you finish</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses" class="max-w-7xl mx-auto px-6 py-4 mb-20">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="sm:text-3xl font-semibold text-2xl text-primary">Popular Courses</h2>
+      <a href="#" class="text-sm font-semibold text-primary flex items-center gap-1">Explore all courses <i class="fa-solid fa-arrow-right text-primary"></i>
+      </a>
+    </div>
+ 
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+ 
+      <!-- Course 1 -->
+      <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="relative h-36 w-full overflow-hidden">
+          <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
+          <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">12h</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs mb-1 text-primary">Backend</p>
+          <h3 class="font-semibold text-secondary text-[15px] mb-2">Java Programming Complete Masterclass</h3>
+          <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span class="text-slate-400">(875)</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-primary">$49.99</span>
+            <i class="fa-solid fa-cart-arrow-down text-primary"></i>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Course 2 -->
+      <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="relative h-36 w-full overflow-hidden">
+          <img src="https://i.pinimg.com/736x/6e/cd/05/6ecd05e38861082a329199dc42d6d602.jpg"
+               alt="JavaScript Essentials for Beginners"
+               class="w-full h-full object-cover">
+          <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs font-medium px-2 py-0.5 rounded">6h</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs mb-1 text-primary">Frontend</p>
+          <h3 class="font-semibold text-secondary text-[15px] mb-2">JavaScript Essentials for Beginners</h3>
+          <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span class="text-slate-400">(980)</span></div>
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-primary">$34.99</span>
+            <i class="fa-solid fa-cart-arrow-down text-primary"></i>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Course 3 -->
+      <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="relative h-36 w-full overflow-hidden">
+          <img src="https://i.pinimg.com/736x/5d/ad/f7/5dadf7e3999711b39f8f4bce56f6f6d0.jpg"
+               alt="Python for Machine Learning 101"
+               class="w-full h-full object-cover">
+          <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs font-medium px-2 py-0.5 rounded">18h</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs mb-1 text-primary">Data Science</p>
+          <h3 class="font-semibold text-secondary text-[15px] mb-2">Python for Machine Learning 101</h3>
+          <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span
+              class="text-slate-400">(2,150)</span></div>
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-primary">$54.99</span>
+            <i class="fa-solid fa-cart-arrow-down text-primary"></i>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Course 4 -->
+      <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="relative h-36 w-full overflow-hidden">
+          <img src="https://i.pinimg.com/736x/51/16/39/511639ed8370cb83211f49e0d8f04af2.jpg"
+               alt="Modern Web Apps with C++ and WebAssembly"
+               class="w-full h-full object-cover">
+          <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs font-medium px-2 py-0.5 rounded">9h</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs mb-1 text-primary">Web Assembly</p>
+          <h3 class="font-semibold text-secondary text-[15px] mb-2">Modern Web Apps with C++ & WebAssembly</h3>
+          <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span
+              class="text-slate-400">(730)</span></div>
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-primary">$39.99</span>
+            <i class="fa-solid fa-cart-arrow-down text-primary"></i>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Course 5 -->
+      <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="relative h-36 w-full overflow-hidden">
+          <img src="https://i.pinimg.com/1200x/28/6b/18/286b18e2d80b42abe26f019348db004a.jpg"
+               alt="Data Analysis with Pandas and NumPy"
+               class="w-full h-full object-cover">
+          <span class="absolute bottom-2 right-2 bg-black/70 text-white text-xs font-medium px-2 py-0.5 rounded">14h</span>
+        </div>
+        <div class="p-4">
+          <p class="text-xs mb-1 text-primary">Data Science</p>
+          <h3 class="font-semibold text-secondary text-[15px] mb-2">Data Analysis with Pandas and NumPy</h3>
+          <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <i class="fa-solid fa-star text-yellow-300"></i>
+            <span
+              class="text-slate-400">(1,860)</span></div>
+          <div class="flex items-center justify-between">
+            <span class="font-semibold text-primary">$44.99</span>
+            <i class="fa-solid fa-cart-arrow-down text-primary"></i>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE CODEWITH -->
+  <section class="max-w-8xl mx-auto px-30 py-10 mb-20">
+    <div class="grid md:grid-cols-2 gap-20 items-center">
+      <div class="flex items-center justify-center ">
+        <div class="relative w-full max-w-sm flex items-center justify-center">
+          <img src="./src/img/download (1).png" alt="">
+        </div>
+      </div>
+      <div >
+        <p class="text-[20px] font-semibold text-secondary mb-2">WHY CHOOSE CODEWITH</p>
+        <h3 class="text-2xl sm:text-3xl font-semibold text-primary mb-4">Everything You Need to Succeed</h3>
+        <p class="text-[18px] text-secondary-3 mb-6">
+          Our platform is designed to help you learn faster, build real skills,  and <br> launch  the career you want with everything in one place.
+        </p>
+        <div class="space-y-4 mb-8 mt-10">
+          <div class="flex items-center gap-5">
+            <span class="w-9 h-9 flex items-center justify-center ">
+              <i class="fa-solid fa-graduation-cap text-primary text-[25px] "></i>
+            </span>
+            <div>
+              <p class="font-semibold text-[18px] text-secondary">Expert-Led Courses</p>
+              <p class="text-[14px] text-secondary">Learn from working professionals</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5 mt-8">
+            <span class="w-9 h-9 items-center justify-center ">
+              <i class="fa-solid fa-trophy text-primary text-[25px]"></i>
+            </span>
+            <div>
+              <p class="font-semibold text-[18px] text-secondary">Real-World Projects</p>
+              <p class="text-[14px] text-secondary">Build projects for your portfolio</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5 mt-8">
+            <span class="w-9 h-9 flex items-center justify-center ">
+              <i class="fa-solid fa-mobile text-primary text-[25px] "></i>
+            </span>
+            <div>
+              <p class="font-semibold text-[18px] text-secondary">Learn Anywhere</p>
+              <p class="text-[14px] text-secondary">Access on any device, anytime</p>
+            </div>
+          </div>
+        </div>
+        
+        <button
+          class="rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-6 py-3 transition-colors">
+          Explore all Courses →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section id="benefits" class="max-w-6xl mx-auto px-6 py-10 mb-20">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-semibold text-primary mb-8">
+          Benefits From Our Online Learning Course
+        </h2>
+
+        <div class="flex gap-4 mb-6 te">
+         
+            <div class="w-10 h-8 rounded-[5px] border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-video gid- text-primary text-[15px] "></i>
+            </div>
+          <div>
+            <h4 class="font-semibold text-secondary text-[18px]">Expert Video Lessons</h4>
+            <p class="text-[16px] text-secondary">Learn step by step through clear, high-quality videos taught by
+              experienced instructors.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 mb-6">
+          
+            <div class="w-10 h-8 rounded-[5px] border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-download grid- text-primary text-[15px] "></i>
+          </div>
+         
+          <div>
+            <h4 class="font-semibold text-secondary text-[18px]">Downloadable Documents</h4>
+            <p class="text-secondary text-[16px]">Access PDF, cheat sheets, source code, and study notes that you can keep
+              forever.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 mb-6">
+          <div class="w-10 h-8 rounded-[5px] border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-mobile grid- text-primary text-[15px] "></i>
+          </div>
+       
+          
+
+          <div>
+            <h4 class="font-semibold text-secondary text-[18px]">Learn at Your Own Pace</h4>
+            <p class="text-secondary text-[16px]">Pause, replay, and revisit lessons anytime, whether you're a beginner or
+              reviewing concepts.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          
+             <div class="w-12 h-8 rounded-[5px] border-2 border-primary flex items-center justify-center bg-secondary-2">
+            <i class="fa-solid fa-briefcase grid- text-primary text-[15px] "></i>
+          </div>
+          
+          <div>
+            <h4 class="font-semibold text-secondary text-[18px]">Career-Focused Skills</h4>
+            <p class="text-secondary text-[16px]">Learn practical technologies such as HTML, CSS, JavaScript, React,
+              Node.js, Java, and more to prepare for real jobs.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center">
+        <div class="relative w-full max-w-sm aspect-square ">
+          <img  src="../src/img/download (2).png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="max-w-6xl mx-auto px-6 py-10 mb-16">
+    <div class=" mb-10">
+      <h4 class="text-3xl sm:text-2xl font-semibold text-primary">Loved By Thousands of Learners</h4>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div class="rounded-xl border border-primary p-5">
+        <p class="text-[14px]  mb-4">"This course completely changed how I approach coding. The projects were
+          practical and easy to follow."</p>
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="rounded-full w-8 h-8" src="https://i.pinimg.com/vwebpf/1200x/95/47/03/954703d50f74fe5e18f03334f6e87c84.webp" alt=""></div>
+          <span class="text-[14px] font-semibold text-secondary">Chan Tola</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-primary p-5">
+        <p class="text-[14px]  mb-9">"Great pacing and clear explanations. I landed my first dev job after
+          finishing the track."</p>
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="rounded-full w-8 h-8" src="https://i.pinimg.com/vwebpf/1200x/15/53/f3/1553f3b485d47883aa87f47b0d89da86.webp" alt=""></div>
+          <span class="text-[14px] font-semibold text-secondary">Soun Chantha</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-primary p-5">
+        <p class="text-[14px]  mb-4">"The downloadable resources alone were worth the price. Highly recommend
+          to any beginner."</p>
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="rounded-full w-8 h-8" src="https://i.pinimg.com/736x/a0/04/20/a00420eb7763c5e885fca42125768598.jpg" alt=""></div>
+          <span class="text-[14px] font-semibold text-secondary">Somaly Roth</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-primary p-5">
+        <p class="text-[14px]  mb-9">"Flexible schedule meant I could learn alongside my full-time job. Loved
+          every minute."</p>
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="rounded-full w-8 h-8" src="https://i.pinimg.com/vwebpf/736x/a2/58/91/a25891df5097b993aee76644cf824fc5.webp" alt=""></div>
+          <span class="text-[14px] font-semibold text-secondary">Somaly Roth</span>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-primary p-5">
+        <p class="text-[14px]  mb-9">"Instructors are patient and knowledgeable. The community support made a
+          huge difference."</p>
+        <div class="flex items-center gap-2">
+          <div>
+            <img class="rounded-full w-8 h-8" src="https://i.pinimg.com/vwebpf/1200x/a1/e2/28/a1e228fff45b08507adc28dfde049190.webp" alt=""></div>
+          <span class="text-[14px] font-semibold text-secondary">Somaly Roth</span>
+        </div>
+      </div>
+
+     
+    </div>
+  </section>
+
+
+
 </body>
+
 </html>
