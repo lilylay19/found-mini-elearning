@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "tailwindcss";
+@theme{
+    --color-primary:rgba(108, 158, 27, 1);
+    --color-secondary:rgba(51, 77, 8, 1);
+    --color-secondary-2:rgb(241, 247, 233);
+    --color-secondary-3:rgb(118, 135, 89);
+    --color-secondary-4: rgb(212, 230, 184)
+}
+@theme{
+    --font-inter: "Inter", sans-serif;
+}
