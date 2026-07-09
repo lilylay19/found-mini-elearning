@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" id="root-html" class="font-inter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link rel="stylesheet" href="/src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+   
+</head>
+
+<body class="font-inter bg-slate-50 text-secondary dark:bg-black dark:text-gray-100 transition-colors duration-300">
+  
+   <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
+      <!-- Logo -->
+      <a href="#">
+        <img src="./image/eLearning.png" alt="Logo" class="h-12 sm:h-16 w-auto">
+      </a>
+ 
+      <ul class="hidden md:flex items-center gap-10 text-secondary dark:text-gray-200 font-medium">
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Courses
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Blog
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Library
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            About
+          </a>
+        </li>
+      </ul>
+ 
+      <!-- Right Side Navigation -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
+        </button>
+ 
+        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          Login
+        </button>
+ 
+        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+          Sign Up
+        </button>
+ 
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+        </button>
+        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+ 
+ 
+    <!-- For mobile devices menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
+      <ul class="flex flex-col text-secondary dark:text-gray-200">
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Library
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            About
+          </a>
+        </li>
+ 
+      </ul>
+ 
+      <div class="flex flex-col gap-3 px-6 py-5">
+        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+          Login
+        </button>
+ 
+        <button class="bg-primary text-white rounded-md py-2">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16" aria-labelledby="hero-title">
+      <div class="space-y-6">
+        <h1 id="hero-title" class="text-4xl md:text-5xl font-bold text-primary leading-tight">
+          Insights Tutorials<br>
+          <span class="text-slate-900 dark:text-white">Your Path to</span> <span class="text-primary">Mastery</span>
+        </h1>
+        <p class="text-slate-500 dark:text-slate-400 text-base md:text-lg leading-relaxed max-w-xl">
+          Explore expert articles, tutorials, and industry insights to level up your coding skills and advance your
+          career.
+        </p>
+
+        <form
+          class="flex items-center bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 p-2 shadow-sm max-w-md focus-within:ring-2 focus-within:ring-primary/20 focus-within:border-primary transition-all"
+          role="search">
+          <label for="search-input" class="sr-only">Search courses, lessons, topics</label>
+          <div class="flex items-center pl-2 text-slate-400 w-full">
+            <i class="fa-solid fa-magnifying-glass mr-2.5 text-sm"></i>
+            <input id="search-input" type="search" placeholder="Search for courses, lessons, topics..."
+              class="w-full text-sm bg-transparent text-slate-800 dark:text-slate-100 focus:outline-none placeholder-slate-400 dark:placeholder-slate-500">
+          </div>
+        </form>
+
+        <div class="space-y-2.5">
+          <span class="text-12 font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 block">Popular
+            Topics:</span>
+          <div class="flex flex-wrap gap-2 text-12 font-medium text-slate-600 dark:text-slate-300">
+            <a href="#"
+              class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white rounded-md transition-all">Career</a>
+            <a href="#"
+              class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white rounded-md transition-all">JavaScript</a>
+            <a href="#"
+              class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white rounded-md transition-all">Python</a>
+            <a href="#"
+              class="px-3 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white rounded-md transition-all">Web
+              Development</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <img src="./image/image 19.png"
+          alt="Interactive modern software developer working on complex application interface layout data charts"
+          class="w-full max-w-lg object-contain drop-shadow-md" loading="eager">
+      </div>
+    </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+
+      <section class="lg:col-span-2 space-y-6" aria-labelledby="articles-heading">
+        <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
+          <h2 id="articles-heading" class="text-2xl font-bold text-slate-900 dark:text-white">Latest Articles</h2>
+          <a href="#" class="text-16 font-semibold text-primary hover:underline flex items-center gap-1.5">View All
+            Articles <i class="fa-solid fa-arrow-right text-12"></i></a>
+        </div>
+
+        <div class="space-y-4">
+            <!-- java script -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 bg-amber-400 rounded-lg flex flex-col items-center justify-center text-slate-900 shadow-inner overflow-hidden">
+              <span class="font-bold text-5xl tracking-tighter">JS</span>
+            </div>
+
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-amber-50 dark:bg-amber-950/30 text-amber-700 dark:text-amber-400 text-[10px] font-bold rounded inline-block">JavaScript</span>
+
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 mb-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  JavaScript Closures: A Deep Dive
+                </h3>
+
+                <p class="text-slate-500 dark:text-slate-400 text-[12px] mt-1 line-clamp-2 leading-relaxed">
+                  Understand closures in JavaScript with practical examples and use cases to write more efficient and
+                  maintainable functions.
+                </p>
+              </div>
+
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-600 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300/30 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTWHPhutWi2WfXBTNY7pBh0Gc2tv9qYlT9OXu3hzZuaQ&s" alt="Sarah Jenkins profile avatar picture"
+                      class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">Sarah Jenkins</span>
+                  <span class="text-slate-400 dark:text-slate-700">•</span>
+                  <span>May 10, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i> 8 min read</span>
+              </div>
+            </div>
+          </article>
+            <!-- Python -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 rounded-lg overflow-hidden bg-[rgb(0,85,204)] flex items-center justify-center p-2">
+              <img src="https://i.pinimg.com/736x/8f/ec/89/8fec8907a9f8d455d455f2f88d11605c.jpg" alt="Node.js logo" class="w-full h-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded inline-block">Python</span>
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  Python List Comprehensions Explained</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed text-[12px]">
+                 write cleaner and more efficient Python code using list comprehensions for concise data transformation
+                 workflows.</p>
+              </div>
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-400 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300/30 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7JIPHei_cQFKinswIk0vA-9ff1IhLgFsPW9lUJuFjsw&s=10" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">David Chen</span>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <span>May 8, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i>  6 min read</span>
+              </div>
+            </div>
+          </article> 
+            <!-- Reactj -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 rounded-lg overflow-hidden bg-black flex items-center justify-center p-2">
+              <img src="https://i.pinimg.com/1200x/9b/4e/e0/9b4ee057076232fb57c48cf80947f8a7.jpg" alt="Node.js logo" class="w-full h-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded inline-block">React</span>
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  Getting Started with React Hooks</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed text-[12px]">
+                  beginner-friendly guide to building component states and lifecycle parameters within programmatic
+                  dynamic view frameworks.</p>
+              </div>
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-400 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300/30 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s1hTDMlyDG_Y--pJot1exccR_JTVEdsQriFKIRDHg2Ks4ZIjq3WYlDs&s=10" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">Emily Rodriguez</span>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <span>May 6, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i> 10 min read</span>
+              </div>
+            </div>
+          </article>  
+            <!-- node js -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 rounded-lg overflow-hidden bg-[rgb(112,181,74)] flex items-center justify-center p-2">
+              <img src="./image/nodejsYk.jpg" alt="Node.js logo" class="w-full h-full object-contain" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded inline-block">Node.js</span>
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  Building REST APIs with Node.js</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed text-[12px]">
+                  Step-by-step documentation detailing structural endpoint setups using Express pipeline processing
+                  architectures.</p>
+              </div>
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-400 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300/30 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxNjYOYTGvpiMf-87CaXc-dzpAX4fxerzO_Wl2sMF6tftRE92Hkn5zNK8&s=10" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">Alex Thompson</span>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <span>May 4, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i> 12 min read</span>
+              </div>
+            </div>
+          </article>
+          <!-- html -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 rounded-lg overflow-hidden bg-[#e44d26] flex items-center justify-center p-2">
+              <img src="./image/html.jpg" alt="HTML5 and CSS3 structural emblems" class="w-full h-full object-contain"
+                loading="lazy">
+            </div>
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-orange-50 dark:bg-orange-950/30 text-orange-700 dark:text-orange-400 text-[10px] font-bold rounded inline-block">Web
+                  Development</span>
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  HTML & CSS Best Practices</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed text-[12px]">
+                  Essential tips and layout paradigms to construct clean, modular, semantic modern browser document
+                  schemas.</p>
+              </div>
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-400 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 border border-slate-300/30 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsDuqJ7u-AU6oTkBk6q7QtHVn1pji3xlJCEB8Sz_n6hPDyDZB8n4ulQ_y2&s=10" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">Lisa Wang</span>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <span>May 2, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i> 7 min read</span>
+              </div>
+            </div>
+          </article>
+            <!-- interview -->
+          <article
+            class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-xs flex flex-col sm:flex-row gap-4 items-start hover:shadow-md hover:border-slate-200 dark:hover:border-slate-700 transition-all duration-300">
+            <div
+              class="w-full sm:w-44 h-44 sm:h-32 shrink-0 rounded-lg overflow-hidden bg-emerald-700 flex items-center justify-center">
+              <img src="./image/Interview preparation.png"
+                alt="Corporate portfolio briefcase detailing career strategy mapping vector graphic"
+                class="w-full h-full object-cover" loading="lazy">
+            </div>
+            <div class="flex flex-col justify-start w-full h-32 py-1">
+              <div>
+                <span
+                  class="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold rounded inline-block">Career</span>
+                <h3
+                  class="font-bold text-slate-900 dark:text-white mt-1.5 hover:text-primary cursor-pointer text-[20px] line-clamp-1 transition-colors">
+                  How to Prepare for a Tech Interview</h3>
+                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1 line-clamp-2 leading-relaxed text-[12px]">
+                  Proven systematic strategies, communication habits, and logic analysis mapping patterns to clear
+                  screening metrics.</p>
+              </div>
+              <div
+                class="flex items-center justify-between w-full text-[11px] text-slate-400 dark:text-slate-500 mt-auto">
+                <div class="flex items-center gap-2">
+                  <div class="w-5 h-5 rounded-full bg-slate-300 overflow-hidden flex items-center justify-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDMy4OWfnosHbGttPmS7Cb5eIER9FPBhLwQSTAISMPw&s=10" alt="" class="w-full h-full object-cover">
+                  </div>
+                  <span class="font-medium text-slate-700 dark:text-slate-300 text-xs">Michael Brown</span>
+                  <span class="text-slate-300 dark:text-slate-700">•</span>
+                  <span>Apr 30, 2024</span>
+                </div>
+                <span class="flex items-center gap-1 shrink-0"><i class="fa-regular fa-clock"></i> 9 min read</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <nav
+          class="flex items-center justify-center gap-1 pt-6 text-12 font-semibold text-slate-700 dark:text-slate-300"
+          aria-label="Pagination Control System Container Dashboard">
+          <button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white shadow-xs"
+            aria-current="page">1</button>
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:text-primary transition-all">2</button>
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:text-primary transition-all">3</button>
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:text-primary transition-all">4</button>
+          <span class="px-1 text-slate-400">...</span>
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:text-primary transition-all">11</button>
+          <button
+            class="w-8 h-8 flex items-center justify-center rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary hover:text-primary transition-all"
+            aria-label="Next Page Navigation"><i class="fa-solid fa-chevron-right"></i></button>
+        </nav>
+      </section>
+
+      <aside class="space-y-8" aria-label="Sidebar Supplementary Widgets">
+
+        <div
+          class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-xs">
+          <h4
+            class="font-bold text-primary dark:text-primary text-base border-b border-slate-100 dark:border-slate-800 pb-3">
+            Categories</h4>
+          <div
+            class="divide-y divide-slate-100 dark:divide-slate-800 text-12 font-medium text-slate-600 dark:text-slate-300 mt-2">
+            <a href="#" class="flex items-center justify-between py-2.5 hover:text-primary transition-colors"><span>All
+                Articles</span> <span
+                class="text-slate-400 bg-slate-50 dark:bg-slate-800/60 px-2 py-0.5 rounded-full font-mono text-[11px]">120</span></a>
+            <a href="#"
+              class="flex items-center justify-between py-2.5 hover:text-primary transition-colors"><span>JavaScript</span>
+              <span
+                class="text-slate-400 bg-slate-50 dark:bg-slate-800/60 px-2 py-0.5 rounded-full font-mono text-[11px]">34</span></a>
+            <a href="#"
+              class="flex items-center justify-between py-2.5 hover:text-primary transition-colors"><span>Python</span>
+              <span
+                class="text-slate-400 bg-slate-50 dark:bg-slate-800/60 px-2 py-0.5 rounded-full font-mono text-[11px]">28</span></a>
+            <a href="#" class="flex items-center justify-between py-2.5 hover:text-primary transition-colors"><span>Web
+                Development</span> <span
+                class="text-slate-400 bg-slate-50 dark:bg-slate-800/60 px-2 py-0.5 rounded-full font-mono text-[11px]">32</span></a>
+            <a href="#"
+              class="flex items-center justify-between py-2.5 hover:text-primary transition-colors"><span>Career</span>
+              <span
+                class="text-slate-400 bg-slate-50 dark:bg-slate-800/60 px-2 py-0.5 rounded-full font-mono text-[11px]">18</span></a>
+          </div>
+          <button
+            class="w-full mt-4 py-2 bg-slate-50 hover:bg-slate-100 dark:bg-slate-800/50 dark:hover:bg-slate-800 text-12 font-semibold text-primary dark:text-primary rounded-lg border border-slate-100 dark:border-slate-700/60 transition-all flex items-center justify-center gap-1">View
+            All Categories <i class="fa-solid fa-chevron-down text-[10px]"></i></button>
+        </div>
+
+        <div
+          class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-xs">
+          <h4
+            class="font-bold text-slate-900 dark:text-white text-base border-b border-slate-100 dark:border-slate-800 pb-3">
+            Popular Articles</h4>
+          <div class="space-y-4 mt-4">
+            <!-- Js -->
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 shrink-0 bg-amber-400 text-slate-900 text-12 font-bold rounded flex items-center justify-center shadow-xs font-mono">
+                JS</div>
+              <div class="min-w-0">
+                <h5
+                  class="font-bold text-12 text-slate-800 dark:text-slate-200 hover:text-primary cursor-pointer line-clamp-1 transition-colors">
+                  Top 10 JavaScript Array Methods</h5>
+                <span class="text-[10px] text-slate-400 font-medium tracking-wide block mt-0.5">5 min read</span>
+              </div>
+            </div>
+            <!-- python -->
+             <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 shrink-0 bg-sky-900 text-sky-400 rounded flex items-center justify-center shadow-xs">
+                <img src="https://i.pinimg.com/736x/8f/ec/89/8fec8907a9f8d455d455f2f88d11605c.jpg" alt="">
+              </div>
+              <div class="min-w-0">
+                <h5
+                  class="font-bold text-12 text-slate-800 dark:text-slate-200 hover:text-primary cursor-pointer line-clamp-1 transition-colors">
+                  Python Decorators Explained</h5>
+                <span class="text-[10px] text-slate-400 font-medium tracking-wide block mt-0.5">7 min read</span>
+              </div>
+            </div>
+            <!-- CSS grid -->
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 shrink-0 bg-[rgb(63,40,117)]   rounded flex items-center justify-center shadow-xs">
+                <img src="./image/css.jpg" alt="">
+              </div>
+              <div class="min-w-0">
+                <h5
+                  class="font-bold text-12 text-slate-800 dark:text-slate-200 hover:text-primary cursor-pointer line-clamp-1 transition-colors">
+                  CSS Grid vs Flexbox: When to use what</h5>
+                <span class="text-[10px] text-slate-400 font-medium tracking-wide block mt-0.5">8 min read</span>
+              </div>
+            </div>
+              <!-- git  -->
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 shrink-0 bg-slate-800 text-rose-500 rounded flex items-center justify-center shadow-xs">
+                <img src="./image/git.jpg" alt="">
+              </div>
+              <div class="min-w-0">
+                <h5
+                  class="font-bold text-12 text-slate-800 dark:text-slate-200 hover:text-primary cursor-pointer line-clamp-1 transition-colors">
+                  Git commands Every developer...</h5>
+                <span class="text-[10px] text-slate-400 font-medium tracking-wide block mt-0.5">5 min read</span>
+              </div>
+            </div>
+              <!-- clean code -->
+            <div class="flex gap-3 items-center">
+              <div
+                class="w-10 h-10 shrink-0 bg-emerald-700 text-emerald-400 rounded flex items-center justify-center shadow-xs">
+                <img src="https://i.pinimg.com/736x/ec/8a/e9/ec8ae92835d234a8bd323d01f006084d.jpg" alt="">
+              </div>
+              <div class="min-w-0">
+                <h5
+                  class="font-bold text-12 text-slate-800 dark:text-slate-200 hover:text-primary cursor-pointer line-clamp-1 transition-colors">
+                  Clean Code Principles for Beginners</h5>
+                <span class="text-[10px] text-slate-400 font-medium tracking-wide block mt-0.5">6 min read</span>
+              </div>
+            </div>
+
+          </div>
+          <button
+            class="w-full mt-5 py-2 bg-slate-50 hover:bg-slate-100 dark:bg-slate-800/50 dark:hover:bg-slate-800 text-12 font-semibold text-primary dark:text-primary rounded-lg border border-slate-100 dark:border-slate-700/60 transition-all flex items-center justify-center gap-1">View
+            All Popular <i class="fa-solid fa-chevron-right text-[9px]"></i></button>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer class="bg-primary text-white mt-16 border-t border-secondary-3 w-full font-inter dark:bg-[color:rgb(22_33_3)] ">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+
+      <div class="flex flex-col gap-6 max-w-xs w-full">
+        <div>
+          <h4 class="font-bold text-2xl text-white tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+            <span class="text-emerald-950 dark:text-primary">E-</span>learning
+          </h4>
+
+          <p class="text-shadow-white text-12 mt-3 leading-relaxed">
+            Empowering the next generation of software engineers through world-class, accessible technical education and
+            career support.
+          </p>
+        </div>
+
+        <div class="flex flex-col items-start text-left mt-2 w-full">
+          <img src="./image/logo-square-01 1.png" alt="ISTAD Logo" class="w-32 h-32 object-contain">
+          <h4 class="font-bold text-white text-2xl mt-3 tracking-wider uppercase ml-6 block">ISTAD</h4>
+        </div>
+      </div>
+
+      <div class="space-y-4 justify-self-center md:justify-self-start">
+        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Company</h5>
+        <ul class="space-y-2.5 text-12 text-shadow-white font-medium">
+          <li><a href="#" class="hover:underline">Home Page</a></li>
+          <li><a href="#" class="hover:underline">Our Instructors</a></li>
+          <li><a href="#" class="hover:underline">About us</a></li>
+          <li><a href="#" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4 justify-self-center md:justify-self-start">
+        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Resources</h5>
+        <ul class="space-y-2.5 text-12 text-shadow-white font-medium">
+          <li><a href="#" class="hover:underline">All Courses</a></li>
+          <li><a href="#" class="hover:underline">Learning Blog</a></li>
+          <li><a href="#" class="hover:underline">Code Library</a></li>
+          <li><a href="#" class="hover:underline">Help Center</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-4 justify-self-center md:justify-self-start w-full max-w-xs">
+        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Newsletter</h5>
+        <p class="text-12 text-shadow-white leading-relaxed">Stay updated with latest courses <br><span>and tech
+            insights.</span></p>
+
+        <div class="flex rounded-md overflow-hidden bg-white shadow-xs border border-emerald-700/20 max-w-xs">
+          <input type="email" placeholder="Enter your email"
+            class="px-3 py-2 text-slate-800 text-12 focus:outline-none w-full bg-white">
+          <button
+            class="bg-[#03543f] text-white px-4 text-12 font-bold hover:bg-slate-900 transition-colors flex items-center justify-center"><i
+              class="fa-solid fa-paper-plane"></i></button>
+        </div>
+
+        <p class="text-[10px] text-white leading-tight">By subscribing, you agree to our <br><span>Privacy
+            Policy.</span></p>
+
+        <div class="flex text-base pt-2 pl-4">
+          <img src="./image/Link.png" alt="">
+          <img src="./image/Link_margin.png" alt="">
+          <img src="./image/Link_margin (1).png" alt="">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-s dark:border-secondary dark:bg-[color:rgb(22_33_3)] py-4 text-[11px] text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 mb-12">
+        <span>© 2024 CodePath Learning Inc. All rights reserved.</span>
+        <div class="flex gap-6">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Terms of Service</a>
+          <a href="#" class="hover:underline">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script>
+    // --- 1. DARK MODE & LIGHT MODE SWITCH ENGINE ---
+    // --- 1. DARK MODE & LIGHT MODE SWITCH ENGINE ---
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+    const mobileThemeIcon = document.getElementById('mobile-theme-icon');
+
+    function refreshThemeUiElements(isDarkStateActive) {
+      if (isDarkStateActive) {
+        document.documentElement.classList.add('dark');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-sun text-lg';
+        if (mobileThemeIcon) mobileThemeIcon.className = 'fa-solid fa-sun text-base';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-moon text-lg';
+        if (mobileThemeIcon) mobileThemeIcon.className = 'fa-solid fa-moon text-base';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    // Evaluate configuration environment matrices
+    const initialDarkIntentDiscovery = document.documentElement.classList.contains('dark');
+    refreshThemeUiElements(initialDarkIntentDiscovery);
+
+    // Event Registration Hooks
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const liveDarkStatus = document.documentElement.classList.contains('dark');
+        refreshThemeUiElements(!liveDarkStatus);
+      });
+    }
+
+    if (mobileThemeToggleBtn) {
+      mobileThemeToggleBtn.addEventListener('click', () => {
+        const liveDarkStatus = document.documentElement.classList.contains('dark');
+        refreshThemeUiElements(!liveDarkStatus);
+      });
+    }  
+  </script> -->
+
+  
+
+  <script src="./new.js"></script>
+</body>
+</html>
