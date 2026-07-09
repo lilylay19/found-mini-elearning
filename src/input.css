@@ -1,13 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-    --color-primary:rgba(108, 158, 27, 1);
-    --color-secondary:rgba(51, 77, 8, 1);
-    --color-secondary-2:rgb(241, 247, 233);
-    --color-secondary-3:rgb(118, 135, 89);
-    --color-secondary-4: rgb(212, 230, 184)
-}
-@theme {
+    --color-primary: #6c9e1b;
+    --color-secondary: #334d08;
+    --color-secondary-2: #f1f7e9;
+    --color-secondary-3: #768759;
+    --color-secondary-4: #d4e6b8;
     --font-inter: "Inter", sans-serif;
 }
 
+@layer base {
+    html.dark {
+        color-scheme: dark;
+    }
+}
+
+.dark {
+    --color-primary: rgb(146, 197, 66);
+    --color-secondary: rgb(34, 50, 8);
+    --color-secondary-2: rgb(25, 35, 18);
+    --color-secondary-3: rgb(180, 200, 150);
+    --color-secondary-4: rgb(60, 85, 40);
+}

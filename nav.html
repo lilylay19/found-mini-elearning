@@ -1,38 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./src/output.css">
-    <!-- link icons -->
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Library</title>
-<script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class', 
-      theme: {
-        extend: {
-          colors: {
-            primary: '#6c9e1b', 
-            secondary: '#334d08',
-            'secondary-2': '#f1f7e9',
-            'secondary-3': '#768759',
-            'secondary-4': '#d4e6b8',
-          }
-        }
-      }
-    }
-  </script>
+<html lang="en" id="root-html" class="font-inter">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses</title>
+  <link rel="stylesheet" href="/src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-50 text-secondary dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300">
 
+<body class="font-inter bg-slate-50 text-secondary dark:bg-slate-900 dark:text-gray-100 transition-colors duration-300">
+  
   <nav id="navbar" class="fixed top-0 left-0 w-full bg-white border-b border-secondary-4 shadow-sm z-50 transition-all duration-300 transform dark:bg-slate-800 dark:border-slate-700">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="#">
-        <img src="/images/eLearnLogo.jpg" alt="Logo" class="h-16 w-auto rounded">
-      </a>
+      <a href="#"><img src="/images/eLearnLogo.png" alt="Logo" class="h-16 w-auto rounded"></a>
 
       <ul class="hidden md:flex items-center gap-10 text-secondary font-medium dark:text-gray-200">
         <li><a href="#" class="hover:text-primary transition">Courses</a></li>
@@ -43,46 +23,36 @@
 
       <div class="hidden md:flex items-center gap-4">
         <button id="theme-toggle-btn" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-slate-700 transition">
-          <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5 text-amber-500 hidden">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38l1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38l1.59-1.59M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z" />
-          </svg>
-          <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="w-5 h-5 text-primary dark:text-sky-400">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>
-          </svg>
+          <svg id="sun-icon" class="w-5 h-5 text-amber-500 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v2.25m0 13.5V21M4.22 4.22l1.59 1.59m12.38 12.38l1.59 1.59M3 12h2.25m13.5 0H21M4.22 19.78l1.59-1.59m12.38-12.38l1.59-1.59M12 7.5a4.5 4.5 0 110 9 4.5 4.5 0 010-9z"/></svg>
+          <svg id="moon-icon" class="w-5 h-5 text-primary dark:text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></svg>
         </button>
-
-        <button class="px-5 py-2 border border-secondary-4 rounded-md text-secondary hover:bg-secondary-2 transition dark:text-gray-200 dark:border-slate-600 dark:hover:bg-slate-700">Login</button>
+        <button class="px-5 py-2 border border-secondary-4 rounded-md text-secondary hover:bg-secondary-2 transition dark:text-gray-200">Login</button>
         <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">Sign Up</button>
       </div>
 
       <button id="menu-btn" class="md:hidden text-secondary dark:text-gray-200">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 bg-white dark:bg-slate-800 dark:border-slate-700">
+    <div id="mobile-menu" class="hidden md:hidden border-t bg-white dark:bg-slate-800 dark:border-slate-700">
       <ul class="flex flex-col text-secondary dark:text-gray-200">
-        <li><a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-slate-700">Courses</a></li>
-        <li><a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-slate-700">Blog</a></li>
-        <li><a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-slate-700">Library</a></li>
-        <li><a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-slate-700">About</a></li>
+        <li><a href="#" class="block px-6 py-4">Courses</a></li>
+        <li><a href="#" class="block px-6 py-4">Blog</a></li>
+        <li><a href="#" class="block px-6 py-4">Library</a></li>
+        <li><a href="#" class="block px-6 py-4">About</a></li>
       </ul>
-
-      <div class="px-6 py-2 flex items-center justify-between border-t border-gray-100 dark:border-slate-700">
-        <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Dark Theme</span>
-        <button id="mobile-theme-toggle-btn" class="p-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-primary dark:text-amber-500">🌓</button>
+      <div class="px-6 py-2 border-t flex items-center justify-between">
+        <span class="text-sm">Dark Theme</span>
+        <button id="mobile-theme-toggle-btn" class="p-2 rounded-lg bg-gray-100 dark:bg-slate-700">🌓</button>
       </div>
-
       <div class="flex flex-col gap-3 px-6 py-5">
         <button class="border border-secondary-4 rounded-md py-2 text-secondary dark:text-gray-200 dark:border-slate-600">Login</button>
         <button class="bg-primary text-white rounded-md py-2">Sign Up</button>
       </div>
     </div>
   </nav>
-  <script src="./js/main.js"></script>
 
-    
+  <script src="./js/main.js"></script>
 </body>
 </html>
