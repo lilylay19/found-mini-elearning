@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>eLearn | Code Library</title>
-<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="./src/output.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,10 +12,9 @@
 <link rel="stylesheet" href="../output.css">
 
 </head>
-<body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-200">
-
-
-<!-- NAVBAR -->
+<body class=" text-gray-700 dark:bg-[#0d0f0d] dark:text-gray-200 transition-colors duration-300">
+    <header>
+   <!-- main nav -->
   <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
       <!-- Logo -->
@@ -128,7 +126,8 @@
       </div>
     </div>
   </nav>
-
+  
+</header>
 
 
 
@@ -143,9 +142,9 @@
   <!-- HERO Secsion -->
   <section class="max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
     <div>
-      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">
-        <span class="text-brand-green">Your Resource Hub</span><br />
-        <span class="text-lime-800 dark:text-white ">Learn Without</span> <span class="text-brand-green">Limits</span>
+      <h1 class="text-4xl lg:text-5xl font-bold leading-tight mt-20">
+        <span class="text-brand-green text-primary ">Your Resource Hub</span><br />
+        <span class=" text-primary ">Learn Without</span> <span class="dark:text-secondary-2 text-secondary">Limits</span>
       </h1>
       <p class="mt-5 text-lime-800 dark:text-gray-400 max-w-md text-lg">
         Access ebooks, cheat sheets, templates, and more carefully curated to support your coding journey.
@@ -234,9 +233,10 @@
 
 
         <!-- 1 Java -->
-        <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
+       <a href="./library-card.html">
+         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#0d2b3e] text-orange-400 text-5xl">
-            <img id="java" src="./image/java.png" alt="java">
+            <img id="java" src="../img/library-image/java.png" alt="java">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -255,12 +255,13 @@
             </div>
           </div>
         </article>
+       </a>
 
 
         <!-- 2 Python -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#1f6fb2] text-yellow-300 text-5xl">
-            <img id="python" src="./image/python.png" alt="python">
+            <img id="python" src="../img/library-image/python.png" alt="python">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -283,7 +284,7 @@
         <!-- 3 JavaScript -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div   class="h-32 flex items-center justify-center bg-yellow-200 text-black text-5xl font-black">
-            <img id="Javascript" src="./image/JS.png" alt="">
+            <img id="Javascript" src="../img/library-image/JS.png" alt="">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -306,7 +307,7 @@
         <!-- 4 HTML -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-orange-600 text-white text-5xl font-black">
-            <img id="html" src="./image/html.png" alt="HTML-5">
+            <img id="html" src="../img/library-image/html.png" alt="HTML-5">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -329,7 +330,7 @@
         <!-- 5 React -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#101820] text-sky-400 text-5xl">
-            <img id="react" src="./image/react.png" alt="react-Js">
+            <img id="react" src="../img/library-image/react.png" alt="react-Js">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -352,7 +353,7 @@
         <!-- 6 Node Js -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-green-600 text-white text-5xl font-black">
-            <img id="node" src="./image/node.png" alt="node-js">
+            <img id="node" src="../img/library-image/node.png" alt="node-js">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -375,7 +376,7 @@
         <!-- 7 C++ -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#0d2b3e] text-blue-400 text-5xl font-black">
-            <img id="cpp" src="./image/cpp.png" alt="C++">
+            <img id="cpp" src="../img/library-image/cpp.png" alt="C++">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -398,7 +399,7 @@
         <!-- 8 Database -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-indigo-900 text-cyan-300 text-5xl">
-            <img id="database" src="./image/data-base.png" alt="data-base">
+            <img id="database" src="../img/library-image/data-base.png" alt="data-base">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -421,7 +422,7 @@
         <!-- 9 Python (repeat) -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#1f6fb2] text-yellow-300 text-5xl">
-              <img id="python2" src="./image/python.png" alt="python">
+              <img id="python2" src="../img/library-image/data-base.png" alt="python">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -444,7 +445,7 @@
         <!-- 10 JavaScript (repeat) -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-yellow-200 text-black text-5xl font-black">
-              <img id="Javascript2" src="./image/JS.png" alt="JavaScript">
+              <img id="Javascript2" src="../img/library-image/JS.png" alt="JavaScript">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -467,7 +468,7 @@
         <!-- 11 Java (repeat) -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-[#0d2b3e] text-orange-400 text-5xl">
-              <img id="java2" src="./image/java.png" alt="java">
+              <img id="java2" src="../img/library-image/java.png" alt="java">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -490,7 +491,7 @@
         <!-- 12 HTML (repeat) -->
         <article class="rounded-xl overflow-hidden border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow">
           <div class="h-32 flex items-center justify-center bg-orange-600 text-white text-5xl font-black">
-              <img id="html2" src="./image/html.png" alt="HTML">
+              <img id="html2" src="nav.html" alt="HTML">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-center">
@@ -528,84 +529,86 @@
 
   <!-- footer -->
 
-
-  <footer class="bg-primary text-white mt-16 border-t border-secondary-3 w-full font-inter dark:bg-[color:rgb(22_33_3)]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
-
-      <div class="flex flex-col gap-6 max-w-xs w-full">
-        <div>
+ <footer class="bg-primary dark:bg-secondary text-white mt-16 border-t border-[#8cdc2b] dark:border-secondary-3 w-full font-inter transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start text-center sm:text-left">
+    
+    <div class="flex flex-col gap-6 max-w-xs w-full mx-auto sm:mx-0 items-center sm:items-start">
+      <div>
+        <a href="/index.html" >
           <h4 class="font-bold text-2xl text-white tracking-wide" style="font-family: 'Orbitron', sans-serif;">
-            <span class="text-emerald-950">E-</span>learning
-          </h4>
-
-          <p class="text-shadow-white text-12 mt-3 leading-relaxed">
-            Empowering the next generation of software engineers through world-class, accessible technical education and
-            career support.
-          </p>
-        </div>
-
-        <div class="flex flex-col items-start text-left mt-2 w-full">
-          <img src="./image/logo-square-01 1.png" alt="ISTAD Logo" class="w-32 h-32 object-contain">
-          <h4 class="font-bold text-white text-2xl mt-3 tracking-wider uppercase ml-6 block">ISTAD</h4>
-        </div>
+          <span class="text-secondary " >Code</span>Path
+        </h4>
+        </a>
+        <p class="text-shadow-white text-xs mt-3 leading-relaxed">
+          Empowering the next generation of software engineers through world-class, accessible technical education and career support.
+        </p>
       </div>
-
-      <div class="space-y-4 justify-self-center md:justify-self-start">
-        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Company</h5>
-        <ul class="space-y-2.5 text-12 text-shadow-white font-medium">
-          <li><a href="#" class="hover:underline">Home Page</a></li>
-          <li><a href="#" class="hover:underline">Our Instructors</a></li>
-          <li><a href="#" class="hover:underline">About us</a></li>
-          <li><a href="#" class="hover:underline">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="space-y-4 justify-self-center md:justify-self-start">
-        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Resources</h5>
-        <ul class="space-y-2.5 text-12 text-shadow-white font-medium">
-          <li><a href="#" class="hover:underline">All Courses</a></li>
-          <li><a href="#" class="hover:underline">Learning Blog</a></li>
-          <li><a href="#" class="hover:underline">Code Library</a></li>
-          <li><a href="#" class="hover:underline">Help Center</a></li>
-        </ul>
-      </div>
-
-      <div class="space-y-4 justify-self-center md:justify-self-start w-full max-w-xs">
-        <h5 class="font-bold uppercase tracking-wider text-sm text-white">Newsletter</h5>
-        <p class="text-12 text-shadow-white leading-relaxed">Stay updated with latest courses <br><span>and tech
-            insights.</span></p>
-
-        <div class="flex rounded-md overflow-hidden bg-white shadow-xs border border-emerald-700/20 max-w-xs">
-          <input type="email" placeholder="Enter your email"
-            class="px-3 py-2 text-slate-800 text-12 focus:outline-none w-full bg-white">
-          <button
-            class="bg-[#03543f] text-white px-4 text-12 font-bold hover:bg-slate-900 transition-colors flex items-center justify-center"><i
-              class="fa-solid fa-paper-plane"></i></button>
-        </div>
-
-        <p class="text-[10px] text-white leading-tight">By subscribing, you agree to our <br><span>Privacy
-            Policy.</span></p>
-
-        <div class="flex text-base pt-2 pl-4">
-          <img src="./image/Link.png" alt="">
-          <img src="./image/Link_margin.png" alt="">
-          <img src="./image/Link_margin (1).png" alt="">
-        </div>
-      </div>
-
-    </div>
-
-    <div class="border-s dark:border-secondary dark:bg-[color:rgb(22_33_3)] py-4 text-[11px] text-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 mb-12">
-        <span>© 2024 CodePath Learning Inc. All rights reserved.</span>
-        <div class="flex gap-6">
-          <a href="#" class="hover:underline">Privacy Policy</a>
-          <a href="#" class="hover:underline">Terms of Service</a>
-          <a href="#" class="hover:underline">Cookie Settings</a>
-        </div>
+      
+      <div class="flex flex-col items-center sm:items-start text-center sm:text-left mt-2 w-full">
+        <img src="../img/New Logo iSTAD-06.png" alt="ISTAD Logo" class="w-4xlxl  object-contain">
+        
       </div>
     </div>
-  </footer>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Company</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="/index.html" class="hover:underline">Home Page</a></li>
+        <li><a href="#" class="hover:underline">Our Instructors</a></li>
+        <li><a href="./about-page.html" class="hover:underline">About us</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Resources</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="./course-page.html" class="hover:underline">All Courses</a></li>
+        <li><a href="./blog-page.html" class="hover:underline">Learning Blog</a></li>
+        <li><a href="./library-page.html" class="hover:underline">Code Library</a></li>
+        <li><a href="#" class="hover:underline">Help Center</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start w-full max-w-xs mx-auto sm:mx-0">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Newsletter</h5>
+      <p class="text-xs text-shadow-white leading-relaxed">Stay updated with latest courses <br><span>and tech insights.</span></p>
+      
+      <div class="flex rounded-md overflow-hidden bg-white shadow-xs border border-emerald-700/20 w-full max-w-xs">
+        <input type="email" placeholder="Enter your email" class="px-3 py-2 text-slate-800 text-xs focus:outline-none w-full bg-white min-w-0">
+        <button class="bg-[#03543f] text-white px-4 text-xs font-bold hover:bg-slate-900 transition-colors flex items-center justify-center shrink-0"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+      
+      <p class="text-[10px] text-white leading-tight">By subscribing, you agree to our <br><span>Privacy Policy.</span></p>
+      
+       <div class="flex justify-center sm:justify-start text-base pt-2 sm:pl-4 gap-4">
+        <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-twitter grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-linkedin-in grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-github grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+       
+      
+      </div>
+    </div>
+ 
+  </div>
+  
+  <div class="border-t border-[#6da824] dark:border-secondary-3 bg-[#4a7a11]/40 dark:bg-black/30 py-4 text-[11px] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 mb-5 text-center">
+      <span>© 2024 CodePath Learning Inc. All rights reserved.</span>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="#" class="hover:underline">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 
