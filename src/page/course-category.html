@@ -8,23 +8,129 @@
   <link rel="stylesheet" href="../output.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
  
  
 </head>
  
-<body class=" ">
+<body class="dark:bg-black transition-colors duration-300">
+  <header>
+   <!-- main nav -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
+      <!-- Logo -->
+      
+  <a href="/.">
+    <!-- Light mode logo -->
+    <img src="../img/logo-light.png" alt="Logo" class="h-10 sm:h-16 w-auto block dark:hidden">
+    <!-- Dark mode logo -->
+    <img src="../img/logo-dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
+  </a>
+
+  <ul class="hidden md:flex items-center gap-15 ml-40 text-secondary dark:text-gray-200 font-medium">
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Courses
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Blog
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Library
+          </a>
+        </li>
+ 
+        <li>
+          <a href="#" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            About
+          </a>
+        </li>
+      </ul>
+ 
+      <!-- Right Side Navigation -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
+        </button>
+ 
+        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          Login
+        </button>
+ 
+        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+          Sign Up
+        </button>
+ 
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+        </button>
+        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
  
  
+    <!-- For mobile devices menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
+      <ul class="flex flex-col text-secondary dark:text-gray-200">
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Library
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            About
+          </a>
+        </li>
  
-  <main class="max-w-7xl mx-auto px-6 py-8">
+      </ul>
+ 
+      <div class="flex flex-col gap-3 px-6 py-5">
+        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+          Login
+        </button>
+ 
+        <button class="bg-primary text-white rounded-md py-2">
+          Sign Up
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+ 
+  <main class="max-w-7xl mx-auto px-6 py-8 pt-28">
  
     <!-- Breadcrumb -->
-    <div class="flex items-center gap-2 text-[14px] text-secondary mb-6">
-      <a href="">Home</a>
+    <div class="flex items-center gap-2 text-[14px] text-secondary dark:text-gray-300 mb-6">
+      <a href="/index.html">Home</a>
       <span>/</span>
       <a href="">Category</a>
       <span>/</span>
-      <a class="text-primary font-semibold" href="">Java category</a>
+      <a class="text-primary dark:text-secondary-2 font-semibold" href="">Java category</a>
     </div>
  
     <!-- ============ HERO ============ -->
@@ -48,43 +154,43 @@
  
     <!-- ============ CATEGORY FILTER ============ -->
     <section class="mt-10">
-      <h2 class="text-lg font-bold text-primary">Explore by Category</h2>
-      <p class="text-sm text-secondary-3 mb-6">Find the right path for your professional career</p>
+      <h2 class="text-lg font-bold text-primary dark:text-white">Explore by Category</h2>
+      <p class="text-sm text-secondary-3 dark:text-gray-400 mb-6">Find the right path for your professional career</p>
  
       <div class="flex flex-wrap gap-6">
-        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border-2 border-primary bg-secondary-2 text-left">
+        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border-2 border-primary bg-secondary-2 dark:bg-black text-left">
           <i class="fa-solid fa-mug-saucer text-primary"></i>
           <span class="text-sm">
-            <span class="block font-semibold text-secondary">Java</span>
+            <span class="block font-semibold text-secondary dark:text-gray-100">Java</span>
             <span class="block text-xs text-primary">55 Courses</span>
           </span>
         </button>
-        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 hover:border-primary transition text-left">
+        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 dark:border-gray-700 hover:border-primary transition text-left">
           <i class="fa-brands fa-js text-primary"></i>
           <span class="text-sm">
-            <span class="block font-semibold text-secondary">JavaScript</span>
-            <span class="block text-xs text-secondary">76 Courses</span>
+            <span class="block font-semibold text-secondary dark:text-gray-100">JavaScript</span>
+            <span class="block text-xs text-secondary dark:text-gray-400">76 Courses</span>
           </span>
         </button>
-        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 hover:border-primary transition text-left">
+        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 dark:border-gray-700 hover:border-primary transition text-left">
           <i class="fa-brands fa-python text-primary"></i>
           <span class="text-sm">
-            <span class="block font-semibold text-secondary">Python</span>
-            <span class="block text-xs text-secondary">62 Courses</span>
+            <span class="block font-semibold text-secondary dark:text-gray-100">Python</span>
+            <span class="block text-xs text-secondary dark:text-gray-400">62 Courses</span>
           </span>
         </button>
-        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 hover:border-primary transition text-left">
+        <button class="flex items-center gap-4 px-4 py-3 rounded-xl border border-secondary-4 dark:border-gray-700 hover:border-primary transition text-left">
           <i class="fa-solid fa-c text-primary"></i>
           <span class="text-sm">
-            <span class="block font-semibold text-secondary">C++</span>
-            <span class="block text-xs text-secondary/60">63 Courses</span>
+            <span class="block font-semibold text-secondary dark:text-gray-100">C++</span>
+            <span class="block text-xs text-secondary/60 dark:text-gray-400">63 Courses</span>
           </span>
         </button>
-        <button class="flex items-center gap-6 px-4 py-3 rounded-xl border border-secondary-4 hover:border-primary transition text-left">
+        <button class="flex items-center gap-6 px-4 py-3 rounded-xl border border-secondary-4 dark:border-gray-700 hover:border-primary transition text-left">
           <i class="fa-solid fa-bars text-primary"></i>
           <span class="text-sm">
-            <span class="block font-semibold text-secondary">More</span>
-            <span class="block text-xs text-secondary">View All</span>
+            <span class="block font-semibold text-secondary dark:text-gray-100">More</span>
+            <span class="block text-xs text-secondary dark:text-gray-400">View All</span>
           </span>
         </button>
       </div>
@@ -92,18 +198,18 @@
  
     <!-- ============ BEGINNER COURSES ============ -->
     <section class="mt-12">
-      <h2 class="text-lg font-bold text-primary mb-4">Beginner Courses</h2>
+      <h2 class="text-lg font-bold text-primary dark:text-white mb-4">Beginner Courses</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">6h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-emerald-600">Beginner</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -119,15 +225,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">6h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-emerald-600">Beginner</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -143,7 +249,7 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">6h</span>
@@ -151,8 +257,8 @@
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-emerald-600">Beginner</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -168,15 +274,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">6h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-emerald-600">Beginner</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Start from zero — syntax, variables, and your first working Java program.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -197,18 +303,18 @@
  
     <!-- ============ INTERMEDIATE COURSES ============ -->
     <section class="mt-12">
-      <h2 class="text-lg font-semibold text-primary mb-4">Intermediate Courses</h2>
+      <h2 class="text-lg font-semibold text-primary dark:text-white mb-4">Intermediate Courses</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">10h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-amber-600">Intermediate</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -224,15 +330,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">10h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-amber-600">Intermediate</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -248,15 +354,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">10h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-amber-600">Intermediate</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -272,7 +378,7 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">10h</span>
@@ -280,8 +386,8 @@
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-amber-600">Intermediate</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">OOP, collections, and exception handling through applied mini-projects.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -302,18 +408,18 @@
  
     <!-- ============ ADVANCED COURSES ============ -->
     <section class="mt-12 mb-16">
-      <h2 class="text-lg font-semibold text-primary mb-4">Advanced Courses</h2>
+      <h2 class="text-lg font-semibold text-primary dark:text-white mb-4">Advanced Courses</h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">15h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-rose-600">Advanced</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -329,15 +435,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">15h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-rose-600">Advanced</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -353,15 +459,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">15h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-rose-600">Advanced</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -377,15 +483,15 @@
           </div>
         </div>
  
-        <div class="rounded-xl border border-secondary-2 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white">
+        <div class="rounded-xl border border-secondary-2 dark:border-gray-700 overflow-hidden hover:shadow-md transition-shadow shadow-secondary-4 bg-white dark:bg-black">
           <div class="relative h-36 w-full overflow-hidden">
             <img src="https://i.pinimg.com/736x/4c/c0/9d/4cc09d61cc4f5e185327c72b72c687ee.jpg" alt="Java Programming Complete Masterclass" class="w-full h-full object-cover">
             <span class="absolute bottom-2 right-2 bg-secondary-4 text-primary text-xs font-medium px-2 py-0.5 rounded">15h</span>
           </div>
           <div class="p-4">
             <p class="text-xs mb-1 font-medium text-rose-600">Advanced</p>
-            <h3 class="font-semibold text-secondary text-[15px] mb-1">Java Programming Complete Masterclass</h3>
-            <p class="text-xs text-secondary/60 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
+            <h3 class="font-semibold text-secondary dark:text-gray-100 text-[15px] mb-1">Java Programming Complete Masterclass</h3>
+            <p class="text-xs text-secondary/60 dark:text-gray-400 mb-2">Multithreading, JVM internals, and Spring-based backend systems at scale.</p>
             <div class="flex items-center gap-1 text-xs text-amber-500 mb-2">
               <i class="fa-solid fa-star text-yellow-300"></i>
               <i class="fa-solid fa-star text-yellow-300"></i>
@@ -402,10 +508,86 @@
         </div>
  
       </div>
+
+  
     </section>
  
   </main>
  
+  <footer class="bg-primary dark:bg-secondary text-white mt-16 border-t border-[#8cdc2b] dark:border-secondary-3 w-full font-inter transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start text-center sm:text-left">
+ 
+    <div class="flex flex-col gap-6 max-w-xs w-full mx-auto sm:mx-0 items-center sm:items-start">
+      <div>
+        <h4 class="font-bold text-2xl text-white tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+          <span class="text-emerald-950">Code</span>Path
+        </h4>
+        <p class="text-shadow-white text-xs mt-3 leading-relaxed">
+          Empowering the next generation of software engineers through world-class, accessible technical education and career support.
+        </p>
+      </div>
+ 
+      <div class="flex flex-col items-center sm:items-start text-center sm:text-left mt-2 w-full">
+        <img src="/image/logo-square-01 1.png" alt="ISTAD Logo" class="w-32 h-32 object-contain">
+        <h4 class="font-bold text-white text-2xl mt-3 tracking-wider uppercase sm:ml-6 block">ISTAD</h4>
+      </div>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Company</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="#" class="hover:underline">Home Page</a></li>
+        <li><a href="#" class="hover:underline">Our Instructors</a></li>
+        <li><a href="#" class="hover:underline">About us</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Resources</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="#" class="hover:underline">All Courses</a></li>
+        <li><a href="#" class="hover:underline">Learning Blog</a></li>
+        <li><a href="#" class="hover:underline">Code Library</a></li>
+        <li><a href="#" class="hover:underline">Help Center</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start w-full max-w-xs mx-auto sm:mx-0">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Newsletter</h5>
+      <p class="text-xs text-shadow-white leading-relaxed">Stay updated with latest courses <br><span>and tech insights.</span></p>
+ 
+      <div class="flex rounded-md overflow-hidden bg-white shadow-xs border border-emerald-700/20 w-full max-w-xs">
+        <input type="email" placeholder="Enter your email" class="px-3 py-2 text-slate-800 text-xs focus:outline-none w-full bg-white min-w-0">
+        <button class="bg-[#03543f] text-white px-4 text-xs font-bold hover:bg-slate-900 transition-colors flex items-center justify-center shrink-0"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+ 
+      <p class="text-[10px] text-white leading-tight">By subscribing, you agree to our <br><span>Privacy Policy.</span></p>
+ 
+      <div class="flex justify-center sm:justify-start text-base pt-2 sm:pl-4 gap-2">
+        <img src="/image/Link.png" alt="">
+        <img src="/image/Link_margin.png" alt="">
+        <img src="/image/Link_margin (1).png" alt="">
+      </div>
+    </div>
+ 
+  </div>
+ 
+  <div class="border-t border-[#6da824] dark:border-secondary-3 bg-[#4a7a11]/40 dark:bg-black/30 py-4 text-[11px] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-center">
+      <span>© 2024 CodePath Learning Inc. All rights reserved.</span>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="#" class="hover:underline">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+ 
+<script src="../js/component/nav.js"></script>
 </body>
 </html>
  

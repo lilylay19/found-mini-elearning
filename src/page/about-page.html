@@ -1,13 +1,391 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../input.css">
-    <link rel="stylesheet" href="../output.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodePath Learning</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  
 </head>
 <body>
+
+  <!-- Navigation -->
+   <header>
+   <!-- main nav -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
+      <!-- Logo -->
+      
+  <a href="/index.html">
+    <!-- Light mode logo -->
+    <img src="../img/logo-light.png" alt="Logo" class="h-10 sm:h-16 w-auto block dark:hidden">
+    <!-- Dark mode logo -->
+    <img src="../img/logo-dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
+  </a>
+
+  <ul class="hidden md:flex items-center gap-15 ml-40 text-secondary dark:text-gray-200 font-medium">
+ 
+        <li>
+          <a href="./course-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Courses
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./blog-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Blog
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./library-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Library
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./about-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            About
+          </a>
+        </li>
+      </ul>
+ 
+      <!-- Right Side Navigation -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+         
+        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
+        </button>
+        <a href="./login.html">
+        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          Login
+        </button>
+        </a>
+       
+        
+         <a href="./register.html">
+        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+          Sign Up
+        </button>
+        </a>
+ 
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+        </button>
+        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+ 
+ 
+    <!-- For mobile devices menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
+      <ul class="flex flex-col text-secondary dark:text-gray-200">
+        <li>
+          <a href="./course-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="./blog-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="./library-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Library
+          </a>
+        </li>
+        <li>
+          <a href="./about-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            About
+          </a>
+        </li>
+ 
+      </ul>
+ 
+      <div class="flex flex-col gap-3 px-6 py-5">
+        <a href="./login.html">
+        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+          Login
+        </button>
+        </a>
+         <a href="./register.html">
+        <button class="bg-primary text-white rounded-md py-2">
+          Sign Up
+        </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+  <div id="mobileMenu" class="mobile-menu max-w-7xl mx-auto px-6 pb-4 md:hidden theme-transition">
+    <div class="rounded-2xl border border-slate-100 bg-white p-4 shadow-sm">
+      <div class="flex flex-col gap-3 font-medium text-slate-700">
+        <a href="#" class="rounded-lg px-3 py-2 hover:bg-[#f4f9eb] hover:text-primary transition">Courses</a>
+        <a href="#" class="rounded-lg px-3 py-2 hover:bg-[#f4f9eb] hover:text-primary transition">Blog</a>
+        <a href="#" class="rounded-lg px-3 py-2 hover:bg-[#f4f9eb] hover:text-primary transition">Library</a>
+        <a href="#" class="rounded-lg px-3 py-2 hover:bg-[#f4f9eb] hover:text-primary transition">About</a>
+        <div class="flex gap-3 pt-2">
+          <a href="#" class="flex-1 px-4 py-2 border border-slate-300 rounded-lg text-center hover:border-primary hover:text-primary transition">Login</a>
+          <a href="#" class="flex-1 px-4 py-2 bg-primary text-white rounded-lg text-center hover:bg-[#5a8516] transition">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+ <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20 dark:bg-black bg-white">
     
+    <!-- About Us / Hero Section -->
+    <section class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+      <div class="fade-up">
+        <span class="inline-block px-4 py-1.5 rounded-full bg-[#eef6e3] dark:bg-slate-800 text-primary font-semibold text-sm mb-6">About Us</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white leading-tight mb-6">
+          Empowering Learners to Build <span style="color: var(--color-primary);">Better Future</span>
+        </h1>
+        <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-10">
+          CodePath is an online learning platform designed to help students and developers master in-demand skills and achieve their career goals.
+        </p>
+
+        <div class="grid sm:grid-cols-2 gap-6">
+          <!-- Mission Card -->
+          <div class="bg-[#f4f9eb] dark:bg-slate-800 p-6 rounded-2xl">
+            <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center mb-4 shadow-sm text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Our Mission</h3>
+            <p class="text-slate-600 dark:text-slate-300">Make quality education accessible to everyone.</p>
+          </div>
+          
+          <!-- Vision Card -->
+          <div class="bg-[#f4f9eb] dark:bg-slate-800 p-6 rounded-2xl">
+            <div class="w-12 h-12 bg-white dark:bg-slate-700 rounded-xl flex items-center justify-center mb-4 shadow-sm text-primary">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Our Vision</h3>
+            <p class="text-slate-600 dark:text-slate-300">A world where anyone can build technology and grow.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative fade-up" style="animation-delay: 0.2s;">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Students learning" class="rounded-3xl shadow-2xl w-full object-cover h-[500px]" />
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="mb-24 flex flex-wrap items-center justify-center gap-x-10 gap-y-6 border-t border-[#eef2e8] dark:border-slate-800 pt-12 md:justify-between">
+      <div class="stat-item flex items-center gap-4">
+        <div class="stat-icon-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A1.5 1.5 0 0 1 5.5 4H10v16H5.5A1.5 1.5 0 0 1 4 18.5v-13Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 4h8.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H10"/>
+            <path stroke-linecap="round" d="M7 8h3M7 12h3M7 16h3"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-4xl font-extrabold leading-none text-secondary dark:text-white">10K+</div>
+          <div class="mt-2 text-sm font-medium text-secondary dark:text-slate-300">Courses</div>
+        </div>
+      </div>
+
+      <div class="stat-item flex items-center gap-4">
+        <div class="stat-icon-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="9" cy="8" r="3.25"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 18.5v-1.25A4.25 4.25 0 0 1 7.75 13h2.5a4.25 4.25 0 0 1 4.25 4.25v1.25"/>
+            <circle cx="16.5" cy="7.5" r="2.25"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 13h1.2A3.3 3.3 0 0 1 20.5 16.3V18"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-4xl font-extrabold leading-none text-secondary dark:text-white">500K+</div>
+          <div class="mt-2 text-sm font-medium text-secondary dark:text-slate-300">Students</div>
+        </div>
+      </div>
+
+      <div class="stat-item flex items-center gap-4">
+        <div class="stat-icon-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.5 9.5 12 4l9.5 5.5L12 15 2.5 9.5Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 11.5v4l6 3 6-3v-4"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-4xl font-extrabold leading-none text-secondary dark:text-white">200+</div>
+          <div class="mt-2 text-sm font-medium text-secondary dark:text-slate-300">Instructors</div>
+        </div>
+      </div>
+
+      <div class="stat-item flex items-center gap-4">
+        <div class="stat-icon-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.5"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.5 14.2s1.2 2 3.5 2 3.5-2 3.5-2"/>
+            <circle cx="9" cy="10" r=".7" fill="currentColor" stroke="none"/>
+            <circle cx="15" cy="10" r=".7" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-4xl font-extrabold leading-none text-secondary dark:text-white">95%</div>
+          <div class="mt-2 text-sm font-medium text-secondary dark:text-slate-300">Satisfaction</div>
+        </div>
+      </div>
+
+      <div class="stat-item flex items-center gap-4">
+        <div class="stat-icon-box">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="8.5"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.5 12h17"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3.5c2.8 2.3 4.2 5.1 4.2 8.5S14.8 18.2 12 20.5c-2.8-2.3-4.2-5.1-4.2-8.5S9.2 5.8 12 3.5Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.2 7.2h11.6M6.2 16.8h11.6"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <div class="text-4xl font-extrabold leading-none text-secondary dark:text-white">150+</div>
+          <div class="mt-2 text-sm font-medium text-secondary dark:text-slate-300">Countries</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Story & Values -->
+    <section class="mb-24">
+      <div class="grid lg:grid-cols-3 gap-12 mb-16">
+        <div class="lg:col-span-1">
+          <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 inline-block border-b-2 border-primary pb-2">Our Story</h2>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            CodePath was founded in 2020 with a simple idea: learning to code should be practical, engaging, and accessible to everyone. Since then, we've helped hundreds of thousands of learners gain the skills they need.
+          </p>
+        </div>
+        <div class="lg:col-span-1">
+           <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80" class="rounded-2xl shadow-lg w-full h-64 object-cover" alt="Classroom">
+        </div>
+        <div class="lg:col-span-1">
+          <h2 class="text-3xl font-bold text-primary mb-6">Why choose CodePath?</h2>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"/></svg></div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Expert Instructors</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Learn from industry professionals.</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="text-primary"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Hands-on learning</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Practice with real projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-100 dark:border-slate-800 pt-12">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 inline-block border-b-2 border-primary pb-2">Our Value</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="flex gap-4 items-start">
+            <svg class="w-8 h-8 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            <div><h4 class="font-bold text-slate-900 dark:text-white">Quality</h4><p class="text-sm text-slate-600 dark:text-slate-300">High-quality content.</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <svg class="w-8 h-8 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+            <div><h4 class="font-bold text-slate-900 dark:text-white">Accessibility</h4><p class="text-sm text-slate-600 dark:text-slate-300">Education for everyone.</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <svg class="w-8 h-8 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+            <div><h4 class="font-bold text-slate-900 dark:text-white">Community</h4><p class="text-sm text-slate-600 dark:text-slate-300">Learn together.</p></div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <svg class="w-8 h-8 text-primary shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            <div><h4 class="font-bold text-slate-900 dark:text-white">Innovation</h4><p class="text-sm text-slate-600 dark:text-slate-300">Staying ahead.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentor Section -->
+    <section class="mb-24 flex flex-col items-center">
+      <h2 class="text-3xl font-bold text-center text-primary mb-12">Meet Our Mentor</h2>
+      <div id="mentor-card" class="w-full max-w-sm">
+        <!-- Card injected via JS -->
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-24">
+      <h2 class="text-3xl font-bold text-center text-primary mb-12">Meet Our Team</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" id="team-grid">
+        <!-- Cards injected via JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#6c9e1b] text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">CodePath</h3>
+        <p class="text-white/90 text-sm leading-relaxed mb-6">Empowering the next generation of software engineers through world-class education.</p>
+        <img class="w-30 h-30" src="../img/logosala.png" alt="logo">
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 tracking-wider text-sm">COMPANY</h4>
+        <ul class="space-y-3 text-sm text-white/90">
+          <li><a href="#" class="hover:text-white">Home Page</a></li>
+          <li><a href="#" class="hover:text-white">Our Instructors</a></li>
+          <li><a href="#" class="hover:text-white">About us</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 tracking-wider text-sm">RESOURCES</h4>
+        <ul class="space-y-3 text-sm text-white/90">
+          <li><a href="#" class="hover:text-white">All Courses</a></li>
+          <li><a href="#" class="hover:text-white">Learning Blog</a></li>
+          <li><a href="#" class="hover:text-white">Code Library</a></li>
+          <li><a href="#" class="hover:text-white">Help Center</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4 tracking-wider text-sm">NEWSLETTER</h4>
+        <p class="text-sm text-white/90 mb-4">Stay updated with latest courses.</p>
+        <div class="flex bg-white rounded-lg overflow-hidden mb-4">
+          <input type="email" placeholder="Enter your email" class="px-4 py-2 text-slate-800 outline-none flex-1 text-sm">
+          <button class="bg-[#334d08] px-4 text-white"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></button>
+        </div>
+        <div class="flex gap-3">
+          <a href="#" class="w-8 h-8 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-black transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-black transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-[#1e293b] flex items-center justify-center hover:bg-black transition"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-sm text-white/80 gap-4">
+      <p>© 2024 CodePath Learning Inc. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Privacy Policy</a>
+        <a href="#" class="hover:text-white">Terms of Service</a>
+        <a href="#" class="hover:text-white">Cookie Settings</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="../js/about.js"> -->
+    <script src="../js/component/nav.js"></script>
+   
+  </script>
 </body>
 </html>

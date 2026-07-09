@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java Complete Course - CodePath</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="../input.css">
+<link rel="stylesheet" href="../output.css">
+
+
+</head>
+<body class="bg-white text-gray-700 dark:bg-[#0d0f0d] dark:text-gray-200 transition-colors duration-300">
+   <header>
+   <!-- main nav -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
+      <!-- Logo -->
+      
+  <a href="/index.html">
+    <!-- Light mode logo -->
+    <img src="../img/logo-light.png" alt="Logo" class="h-10 sm:h-16 w-auto block dark:hidden">
+    <!-- Dark mode logo -->
+    <img src="../img/logo-dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
+  </a>
+
+  <ul class="hidden md:flex items-center gap-15 ml-40 text-secondary dark:text-gray-200 font-medium">
+ 
+        <li>
+          <a href="./course-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Courses
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./blog-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Blog
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./library-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            Library
+          </a>
+        </li>
+ 
+        <li>
+          <a href="./about-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
+            About
+          </a>
+        </li>
+      </ul>
+ 
+      <!-- Right Side Navigation -->
+      <div class="hidden md:flex items-center gap-4">
+        <!-- Dark Mode Toggle -->
+         
+        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
+        </button>
+        <a href="./login.html">
+        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          Login
+        </button>
+        </a>
+       
+        
+         <a href="./register.html">
+        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+          Sign Up
+        </button>
+        </a>
+ 
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+        </button>
+        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+ 
+ 
+    <!-- For mobile devices menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
+      <ul class="flex flex-col text-secondary dark:text-gray-200">
+        <li>
+          <a href="./course-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Courses
+          </a>
+        </li>
+        <li>
+          <a href="./blog-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="./library-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            Library
+          </a>
+        </li>
+        <li>
+          <a href="./about-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+            About
+          </a>
+        </li>
+ 
+      </ul>
+ 
+      <div class="flex flex-col gap-3 px-6 py-5">
+        <a href="./login.html">
+        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+          Login
+        </button>
+        </a>
+         <a href="./register.html">
+        <button class="bg-primary text-white rounded-md py-2">
+          Sign Up
+        </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  
+</header>
+
+  <!-- Breadcrumb -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 pt-16 md:pt-24 pb-2">
+    <div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+      <a href="#" class="flex items-center gap-1 hover:text-primary dark:hover:text-lime-500 transition">
+        <i class="fa-solid fa-house text-xs"></i>
+        Home
+      </a>
+      <i class="fa-solid fa-angle-right text-xs"></i>
+      <a href="#" class="hover:text-primary dark:hover:text-lime-500 transition">Library</a>
+      <i class="fa-solid fa-angle-right text-xs"></i>
+      <span class="text-lime-700 dark:text-lime-500 font-medium">Java</span>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-10">
+
+  
+
+    <!-- Hero Card -->
+    <div class="relative dark:bg-secondary bg-primary rounded-xl p-5 sm:p-8 md:p-10 overflow-hidden mb-8 mt-4">
+      <span class="absolute top-5 left-6 dark:bg-primary bg-secondary text-sm sm:text-md hover:bg-lime-700 font-semibold px-3 py-2 text-center rounded cursor-pointer text-white">Best Seller</span>
+      <span class="absolute top-5 right-6 bg-none border-1 border-white/60 rounded text-white text-sm sm:text-md font-semibold px-3 py-2 rounded cursor-pointer">8.5 Hours</span>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-16 sm:pt-2 md:ml-50">
+        <!-- Logo/Title -->
+        <div class="flex flex-col items-center text-center mb-10 min-w-[160px] sm:min-w-[200px]">
+          <div class="text-6xl "><img src="./java.png" width="150" height="150" class="sm:w-[200px] sm:h-[200px]" alt="Java Logo"></div>
+          <div class=" text-white font-bold tracking-wide text-xl sm:text-2xl">Complete Course</div>
+        </div>
+
+        <!-- Description -->
+        <div class="flex-1 text-white">
+          <p class="text-base sm:text-lg leading-relaxed max-w-md">
+            Learn core Java concept and build real-world applications with hands-on projects.
+            Learn this courses now. Discount it waiting for you.
+          </p>
+          <div class="flex items-center gap-3 mt-5">
+            <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden flex items-center justify-center text-black font-bold"><img src="./wallpapersden.com_anonymous-4k-rain-design_3840x2160.jpg" alt="Instructor" class="w-full h-full object-cover"></div>
+            <div>
+              <div class="font-semibold text-white">Jonh Smith</div>
+              <div class="text-sm text-gray-200/80">Senior Software Engineer</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 mt-3 mb-3 text-sm text-gray-100">
+            <span class="text-yellow-400">★★★☆</span>
+            <span>4.8 (2.3k reviews) &nbsp;|&nbsp; 23.6k students enrolled</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enroll button -->
+      <button class="static sm:absolute bottom-6 left-6 w-full sm:w-auto mt-4 sm:mt-0 dark:bg-primary bg-secondary hover:bg-lime-700 cursor-pointer transition text-white font-semibold px-5 py-2.5 rounded-md">
+        Enroll Now - $49.99
+      </button>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y sm:divide-y-0 divide-black/10 dark:divide-white/10 border border-black/10 dark:border-white/10 rounded-xl bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none mb-8">
+      <div class="p-4 sm:p-5 text-center">
+        <div class="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">23.5 Hours</div>
+        <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">On-demand video</div>
+      </div>
+      <div class="p-4 sm:p-5 text-center">
+        <div class="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">160 Lectures</div>
+        <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Full lifetime access</div>
+      </div>
+      <div class="p-4 sm:p-5 text-center">
+        <div class="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">Certificate</div>
+        <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Shareable</div>
+      </div>
+      <div class="p-4 sm:p-5 text-center">
+        <div class="font-semibold text-sm sm:text-base text-gray-900 dark:text-white">Beginner to Advanced</div>
+        <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">All levels</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="grid grid-cols-3 sm:grid-cols-5 border border-black/10 dark:border-white/10 rounded-xl overflow-hidden mb-8 bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none">
+      <div class="text-center py-3 text-sm sm:text-base font-medium text-gray-900 dark:text-white border-r border-b sm:border-b-0 border-black/10 dark:border-white/10 cursor-pointer">Overview</div>
+      <div class="text-center py-3 text-sm sm:text-base font-medium text-lime-700 dark:text-lime-500 border-r border-b sm:border-b-0 border-black/10 dark:border-white/10 cursor-pointer bg-lime-50 dark:bg-transparent">Curriculum</div>
+      <div class="text-center py-3 text-sm sm:text-base font-medium text-gray-600 dark:text-gray-300 border-b sm:border-r sm:border-b-0 border-black/10 dark:border-white/10 cursor-pointer">Reviews</div>
+      <div class="text-center py-3 text-sm sm:text-base font-medium text-gray-600 dark:text-gray-300 border-r border-black/10 dark:border-white/10 cursor-pointer">Instructor</div>
+      <div class="text-center py-3 text-sm sm:text-base font-medium text-gray-600 dark:text-gray-300 cursor-pointer">FAQs</div>
+    </div>
+
+    <!-- Content: Curriculum + Sidebar -->
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-8 pb-16">
+
+      <!-- Curriculum -->
+      <div>
+        <div class="flex items-center justify-between mb-1">
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">Course Curriculum</h2>
+          <button class="text-sm text-red-600 dark:text-red-500 hover:text-red-800 dark:hover:text-red-700">Expand All</button>
+        </div>
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">33 Sections , 160 Lectures , 23.5 Hours</p>
+
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">1. Introductions To Java</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">2. Java Basics</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">3. Object Oriented Programming</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">10 Lectures 1h 30m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">4. Exception Handling</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">14 Lectures 1h 45m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">5. Collections Framework</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">16 Lectures 2h 20m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">6. Multithreading</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">12 Lectures 1h 20m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+ <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">7. File Handling &amp; I / O</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">10 Lectures 1h 15m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <div class="border border-black/10 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-white/[0.02] shadow-sm dark:shadow-none px-4 py-3 sm:px-5 sm:py-4 flex items-center justify-between cursor-pointer hover:bg-gray-100 dark:hover:bg-white/[0.04] transition">
+            <div>
+              <div class="font-medium text-sm sm:text-base text-gray-900 dark:text-white">8. Advanced Tipic</div>
+              <div class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">10 Lectures 1h 15m</div>
+            </div>
+            <span class="text-gray-500 dark:text-gray-400"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="mt-6 lg:mt-18 h-auto lg:h-120 rounded-xl bg-gray-50 dark:bg-white/[0.04] border border-black/10 dark:border-transparent shadow-sm dark:shadow-none p-5">
+        <h3 class="text-lime-700 dark:text-lime-500 text-center font-semibold mb-8 text-xl sm:text-2xl">Popular Articles</h3>
+        <div class="space-y-4">
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-yellow-500 flex items-center justify-center text-black font-bold text-sm">JS</div>
+            <div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white leading-snug">Top 10 JavaScript Array Methods</div>
+              <div class="text-xs text-gray-500 dark:text-gray-500">8 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-blue-500 flex items-center justify-center text-white font-bold text-sm">Py</div>
+            <div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white leading-snug">Python Decorators Explained</div>
+              <div class="text-xs text-gray-500 dark:text-gray-500">7 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-11.5 h-9 rounded-md bg-purple-500 flex items-center justify-center text-white font-bold text-sm">CSS</div>
+            <div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white leading-snug">CSS Grid Vs Flexbox: When to use what</div>
+              <div class="text-xs text-gray-500 dark:text-gray-500">9 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-orange-600 flex items-center justify-center text-white font-bold text-sm">&lt;/&gt;</div>
+            <div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white leading-snug">Git commands Every developer...</div>
+              <div class="text-xs text-gray-500 dark:text-gray-500">7 min read</div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-9 rounded-md bg-green-500 flex items-center justify-center text-white font-bold text-sm">&lt;/&gt;</div>
+            <div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white leading-snug">Clean Code Principles for Beginners</div>
+              <div class="text-xs text-gray-500 dark:text-gray-500">6 min read</div>
+            </div>
+          </div>
+        </div>
+[7/9/2026 1:58 PM] Bora Nin: <a href="#" class="inline-block mt-5 text-sm text-lime-700 dark:text-lime-500 hover:text-lime-800 dark:hover:text-lime-400 font-medium">View All Categories &gt;</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+ 
+
+
+  <!-- Footer -->
+  <footer class="bg-primary dark:bg-secondary text-white mt-16 border-t border-[#8cdc2b] dark:border-secondary-3 w-full font-inter transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start text-center sm:text-left">
+    
+    <div class="flex flex-col gap-6 max-w-xs w-full mx-auto sm:mx-0 items-center sm:items-start">
+      <div>
+        <a href="/index.html" >
+          <h4 class="font-bold text-2xl text-white tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+          <span class="text-secondary " >Code</span>Path
+        </h4>
+        </a>
+        <p class="text-shadow-white text-xs mt-3 leading-relaxed">
+          Empowering the next generation of software engineers through world-class, accessible technical education and career support.
+        </p>
+      </div>
+      
+      <div class="flex flex-col items-center sm:items-start text-center sm:text-left mt-2 w-full">
+        <img src="../img/New Logo iSTAD-06.png" alt="ISTAD Logo" class="w-4xlxl  object-contain">
+        
+      </div>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Company</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="/index.html" class="hover:underline">Home Page</a></li>
+        <li><a href="#" class="hover:underline">Our Instructors</a></li>
+        <li><a href="./about-page.html" class="hover:underline">About us</a></li>
+        <li><a href="#" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Resources</h5>
+      <ul class="space-y-2.5 text-xs text-shadow-white font-medium">
+        <li><a href="#" class="hover:underline">All Courses</a></li>
+        <li><a href="#" class="hover:underline">Learning Blog</a></li>
+        <li><a href="./library.html" class="hover:underline">Code Library</a></li>
+        <li><a href="#" class="hover:underline">Help Center</a></li>
+      </ul>
+    </div>
+ 
+    <div class="space-y-4 justify-self-center md:justify-self-start w-full max-w-xs mx-auto sm:mx-0">
+      <h5 class="font-bold uppercase tracking-wider text-sm text-white">Newsletter</h5>
+      <p class="text-xs text-shadow-white leading-relaxed">Stay updated with latest courses <br><span>and tech insights.</span></p>
+      
+      <div class="flex rounded-md overflow-hidden bg-white shadow-xs border border-emerald-700/20 w-full max-w-xs">
+        <input type="email" placeholder="Enter your email" class="px-3 py-2 text-slate-800 text-xs focus:outline-none w-full bg-white min-w-0">
+        <button class="bg-[#03543f] text-white px-4 text-xs font-bold hover:bg-slate-900 transition-colors flex items-center justify-center shrink-0"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+      
+      <p class="text-[10px] text-white leading-tight">By subscribing, you agree to our <br><span>Privacy Policy.</span></p>
+      
+       <div class="flex justify-center sm:justify-start text-base pt-2 sm:pl-4 gap-4">
+        <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-twitter grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-linkedin-in grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+          <div class="w-8 h-8 flex items-center justify-center bg-secondary dark:bg-primary rounded-full">
+            <i class="fa-brands fa-github grid- text-secondary-2 text-[15px] dark:text-secondary-4 "></i>
+          </div>
+       
+      
+      </div>
+    </div>
+ 
+  </div>
+  
+  <div class="border-t border-[#6da824] dark:border-secondary-3 bg-[#4a7a11]/40 dark:bg-black/30 py-4 text-[11px] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-center">
+      <span>© 2024 CodePath Learning Inc. All rights reserved.</span>
+      <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="#" class="hover:underline">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../js/component/nav.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
     --color-primary:rgba(108, 158, 27, 1);
     --color-secondary:rgba(51, 77, 8, 1);
@@ -10,4 +11,5 @@
 @theme {
     --font-inter: "Inter", sans-serif;
 }
+
 
