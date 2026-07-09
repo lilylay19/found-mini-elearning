@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./src/output.css">
-        <link rel="stylesheet" href="./src/input.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login</title>
-    <script src="./Login.js" defer></script>
+    <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../src/input.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./Resgister.js" defer></script>
     <script src="./nav.js" defer></script>
+    <title>Register</title>
+     
 </head>
-<body  class="bg-white dark:bg-black ">
-   
-  <header>
+<body class="bg-white dark:bg-black ">
+
+<header>
    <!-- main nav -->
   <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
-      <!-- Logo -->
+        <!-- Logo -->
      <a href="#">
     <!-- Light mode logo -->
     <img src="./Logo_light.png" alt="Logo" class="h-12 sm:h-16 w-auto block dark:hidden">
     <!-- Dark mode logo -->
     <img src="./Logo_dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
   </a>
-
-
+ 
       <ul class="hidden md:flex items-center gap-10 text-secondary dark:text-gray-200 font-medium">
  
         <li>
@@ -64,9 +63,9 @@
           Login
         </button>
  
-        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+        <!-- <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
           Sign Up
-        </button>
+        </button> -->
  
       </div>
       <!-- Mobile Menu Button -->
@@ -107,10 +106,10 @@
  
       </ul>
  
-      <div class="flex flex-col gap-3 px-6 py-5">
+      <!-- <div class="flex flex-col gap-3 px-6 py-5">
         <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
           Login
-        </button>
+        </button> -->
  
         <button class="bg-primary text-white rounded-md py-2">
           Sign Up
@@ -122,51 +121,88 @@
 </header>
 
 
+    <div class="md:w-6xl flex flex-col md:flex-row mx-auto ">
+
+      <!--LEFT SIDE-->
+ 
+    <div class="w-full md:w-1/2 bg-brand-50 flex items-center justify-center p-8 md:p-14 sm:p-8 dark:bg-black mt-10 ">
+        <div class="max-w-md w-full ">
+            <h1 class="text-2xl md:text-3xl sm:text-2xl font-bold leading-snug mb-4 text-center ">
+                <span class="text-primary dark:text-secondary-2 text-sm">Join Thousands of learners</span><br>
+                <span class="text-primary dark:text-primary">Start Your Coding</span><br>
+                <span class="text-primary dark:text-primary">Journey</span> <span class="text-secondary dark:text-secondary-2">Today</span>
+            </h1>
+            <p class="text-black dark:text-secondary-4 text-center text-sm sm:text-base sm:mb-8 mb-6 ">
+                Create an account and get access to<br>
+               expert-led courses, real-world project,
+               <br>and community of developers.
+            </p>
+            
     
-<div class="min-h-screen flex flex-col md:flex-row">
-
-
+         <ul class="space-y-5 mb-6 sm:space-y-5 sm:mb-8">
+        <li class="flex gap-3">
+          <span class="text-primary text-lg sm:text-xl dark:text-primary shrink-0"> <i class="fa-solid fa-file-excel"></i> </span>
+          <div>
+            <p class="font-bold text-secondary dark:text-primary text-sm sm:text-base">Expert-led courses</p>
+            <p class="text-secondary dark:text-secondary-4 text-xs sm:text-sm">Learn from industry professionals</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-primary text-xl dark:text-primary "> <i class="fa-solid fa-link"></i> </span>
+          <div>
+            <p class="font-bold text-secondary dark:text-primary text-sm sm:text-base">Real-World Project</p>
+            <p class="text-secondary dark:text-secondary-4 text-xs sm:text-sm">Build project for your portfolio</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-primary text-xl dark:text-primary"><i class="fa-solid fa-award"></i></span>
+          <div>
+            <p class="font-bold text-secondary dark:text-primary text-sm sm:text-base">Certificate of Completion</p>
+            <p class="text-secondary dark:text-secondary-4 text-xs sm:text-sm">Earn Certificate and boost your career</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="text-primary text-xl dark:text-primary"><i class="fa-solid fa-desktop"></i> </span>
+          <div>
+            <p class="font-bold text-secondary dark:text-primary text-sm sm:text-base">Learn anywhere</p>
+            <p class="text-secondary dark:text-secondary-4 text-xs sm:text-sm">Access on any device, anytime</p>
+          </div>
+        </li>
+      </ul>
  
-  <!-- LEFT SIDE -->
-  <div class="w-full md:w-1/2 bg-brand-50 flex items-center justify-center p-8 md:p-14 mt-13 dark:bg-black">
-    <div class="max-w-md w-full">
-      <h1 class="text-2xl md:text-3xl font-bold leading-snug mb-4 text-center">
-        <span class="text-primary dark:text-primary">Welcome</span> <span class="text-secondary dark:text-white">Back</span><br>
-        <span class="text-primary dark:text-primary">Let's continue you coding </span> <span class="text-secondary dark:text-white">journey</span> 
-      </h1>
-      <p class="text-black  text-center dark:text-secondary-4" >
-        Login to access your courses, track your <br>
-         progress, and continue learning.
-      </p>
- 
-      <div class="flex justify-center">
-        <div class="text-8xl">
-          <img src="./person1.png" alt="Login" class="w-full h-auto">
-        </div>
+      <div class="hidden md:flex justify-center">
+        <div class="text-7xl"><img src="./computer1.png" alt="Register" class="max-w-xs e-full h-auto"></div>
       </div>
     </div>
-  </div>
- 
-  <!-- RIGHT SIDE -->
-  <div class="w-full md:w-1/2 flex  justify-center p-8 md:p-14 mt-13 dark:bg-black">
+    </div>
+
+    <!--RIGHT SIDE-->
+    <div class="w-full md:w-1/2 flex  justify-center p-6 md:p-14 sm:p-8  dark:bg-black mt-13">
     <div class="max-w-md w-full">
  
-      <h2 class="text-2xl font-bold text-primary dark:text-primary text-center mb-1">Login to CodePath</h2>
-      <p class="text-center text-black text-sm mb-6 dark:text-secondary-4">
-        Don't have an account? <a href="./Register.html" class="text-primary dark:text-primary font-medium hover:underline ">Sign up</a>
+      <h2 class="text-xl sm:text-2xl font-bold text-primary text-center mb-1 dark:text-primary">Create Your Account</h2>
+      <p class="text-center text-secondary text-xs sm:text-sm mb-6 dark:text-secondary-4">
+        Already have an account? <a href="./index.html" class="text-primary font-medium hover:underline  dark:text-primary ">Login</a>
       </p>
  
-      <form id="loginForm" novalidate class="space-y-4">
+      <form id="RegisterForm" novalidate class="space-y-4 sm:space-y-4">
  
-       <div>
-          <label for="email" class="block text-sm font-semibold text-secondary dark:text-secondary mb-1">Email</label>
-          <input type="email" id="email" placeholder="Enter your email address"
+           <div>
+          <label for="fullName" class="block text-sm font-semibold text-secondary mb-1  dark:text-primary">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name"
             class="w-full px-4 py-2.5 rounded-md border border-primary dark:border-primary bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-brand-400 placeholder-gray-500 text-sm">
+          <p class="text-red-500 text-xs mt-1 hidden" id="fullNameError">Please enter your full name.</p>
+        </div>
+ 
+        <div>
+          <label for="email" class="block text-sm font-semibold text-secondary mb-1  dark:text-primary">Email</label>
+          <input type="email" id="email" placeholder="Enter your email address"
+            class="w-full px-4 py-2.5 rounded-md border border-primary dark:border-primary bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-brand-400 placeholder-gray-500  text-sm">
           <p class="text-red-500 text-xs mt-1 hidden" id="emailError">Please enter a valid email address.</p>
         </div>
  
         <div>
-          <label for="password" class="block text-sm font-semibold text-secondary dark:text-secondary mb-1">Password</label>
+          <label for="password" class="block text-sm font-semibold text-secondary mb-1  dark:text-primary">Password</label>
           <div class="relative">
             <input type="password" id="password" placeholder="Enter your password" 
       
@@ -176,29 +212,49 @@
           </div>
           <p class="text-red-500 text-xs mt-1 hidden" id="passwordError">Please enter your password.</p>
         </div>
+    
+        <div>
+          <label for="confirmPassword" class="block text-sm font-semibold text-secondary mb-1  dark:text-primary">Confirm password</label>
+          <div class="relative">
+            <input type="password" id="confirmPassword" placeholder="Confirm your password"
+              class="w-full px-4 py-2.5 rounded-md border border-primary dark:border-primary bg-white dark:bg-black focus:outline-none focus:ring-2 focus:ring-brand-400 placeholder-gray-500 text-sm pr-10">
+            <button type="button" data-target="confirmPassword" class="toggle-password absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <p class="text-red-500 text-xs mt-1 hidden" id="confirmPasswordError">Passwords do not match.</p>
+        </div>
  
-        <div class="flex items-center justify-between pt-1">
-          <label class="flex items-center gap-2 text-sm text-primary dark:text-primary cursor-pointer">
-            <input type="checkbox" id="rememberMe" class="rounded border-primary dark:border-primary text-primary dark:text-primary focus:ring-primary">
-            Remember me
-          </label>
-          <a href="#" class="text-sm text-primary dark:text-primary hover:underline font-medium">Forgot Password?</a>
-          
+         <div class="pt-1">
+          <p class="text-sm font-medium text-secondary dark:text-secondary mb-2">Password must contain:</p>
+          <ul class="space-y-1.5 text-sm">
+            <li class="flex items-center gap-2" id="rule-length">
+              <span class="rule-icon text-primary dark:text-primary"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="rule-text text-secondary dark:text-secondary">At least 8 characters</span>
+            </li>
+            <li class="flex items-center gap-2" id="rule-upper">
+              <span class="rule-icon text-primary dark:text-primary"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="rule-text text-secondary dark:text-secondary">One uppercase letter</span>
+            </li>
+            <li class="flex items-center gap-2" id="rule-number">
+              <span class="rule-icon text-primary dark:text-primary"><i class="fa-solid fa-circle-check"></i></span>
+              <span class="rule-text text-secondary dark:text-secondary">One number</span>
+            </li>
+          </ul>
         </div>
  
         <button type="submit"
           class="w-full bg-primary hover:bg-brand-700 text-white font-semibold py-3 rounded-md transition-colors mt-2">
-          Login
+          Create Account
         </button>
  
-        <p class="text-center text-xs text-black dark:text-gray-200 pt-2 mb-5">
+         <p class="text-center text-xs text-black pt-2 mb-5  dark:text-gray-200">
           By logging in, you agree to our 
         </p>
-        <p class="text-primary dark:text-primary hover:underline text-center text-xs">Terms of Service 
-          <span class="text-center text-xs text-black dark:text-gray-200">and</span> <span class="text-primary dark:text-primary hover:underline">Privacy Policy</span></p>
- 
- 
-        <div class="flex justify-center gap-4 pt-2">
+        <p class="text-primary hover:underline text-center text-xs dark:text-primary">Terms of Service 
+          <span class="text-center text-xs text-black dark:text-gray-200">and</span> <span class="text-center text-xs text-black dark:text-primary">Privacy Policy</span></p>
+
+      <div class="flex justify-center gap-4 pt-2">
           <button type="button" class="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center bg-white ">
             <img src="./google.png" alt="">
           </button>
@@ -209,13 +265,13 @@
             <img src="./Github.png" alt="">
           </button>
         </div>
- 
+
       </form>
     </div>
-  </div>
- 
-</div>
-  <footer class="bg-primary dark:bg-secondary text-white mt-16 border-t border-[#8cdc2b] dark:border-secondary-3 w-full font-inter transition-colors duration-300">
+    </div>
+    </div>
+
+    <footer class="bg-primary dark:bg-secondary text-white mt-16  border-primary dark:border-secondary-3 w-full font-inter transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start text-center sm:text-left">
     
     <div class="flex flex-col gap-6 max-w-xs w-full mx-auto sm:mx-0 items-center sm:items-start">
@@ -285,7 +341,6 @@
     </div>
   </div>
 </footer>
-
 
 </body>
 </html>
