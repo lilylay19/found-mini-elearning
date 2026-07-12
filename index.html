@@ -14,120 +14,111 @@
   <title>Landing page</title>
 </head>
  
-<body class="  dark:bg-black transition-colors duration-300 font-">
+<body class="  dark:bg-black transition-colors duration-300 ">
  
-  <header>
-   <!-- main nav -->
-  <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
-      <!-- Logo -->
-      
-  <a href="./index.html">
-    <!-- Light mode logo -->
-    <img src="./src/img/logo-light.png" alt="Logo" class="h-10 sm:h-16 w-auto block dark:hidden">
-    <!-- Dark mode logo -->
-    <img src="./src/img/logo-dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
-  </a>
+<nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
+  <div class="max-w-7xl  flex items-center justify-between px-6 sm:px-8 lg:px-6 py-2  mx-auto ">
+    <!-- Logo -->
+    <a href="./index.html" class="shrink-0">
+      <!-- Light mode logo -->
+      <img src="./src/img/logo-light.png" alt="Logo" class="h-9 sm:h-12 lg:h-16 w-auto  dark:hidden">
+      <!-- Dark mode logo -->
+      <img src="./src/img/logo-dark.png" alt="Logo" class="h-9 sm:h-12 lg:h-16 w-auto hidden dark:block">
+    </a>
 
-  <ul class="hidden md:flex items-center gap-15 ml-40 text-secondary dark:text-gray-200 font-medium">
- 
-        <li>
-          <a href="./src/page/course-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Courses
-          </a>
-        </li>
- 
-        <li>
-          <a href="./src/page/blog-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Blog
-          </a>
-        </li>
- 
-        <li>
-          <a href="./src/page/library-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Library
-          </a>
-        </li>
- 
-        <li>
-          <a href="./src/page/about-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            About
-          </a>
-        </li>
-      </ul>
- 
-      <!-- Right Side Navigation -->
-      <div class="hidden md:flex items-center gap-4">
-        <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
-          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
-        </button>
-        
-        <a href="./src/page/login.html">
+    <ul class="hidden md:flex ml-40 gap-15 lg:gap-20 xl:gap-17   lg:text-3xl text-secondary dark:text-secondary-2 font-semibold">
+      <li>
+        <a href="./src/page/course-page.html" class="hover:text-primary  transition">
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/blog-page.html" class="hover:text-primary dark:transition">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/library-page.html" class="hover:text-primary  transition">
+          Library
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/about-page.html" class="hover:text-primary transition">
+          About
+        </a>
+      </li>
+    </ul>
 
-        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+    <!-- Right Side Navigation -->
+    <div class="hidden md:flex  gap-2 lg:gap-4 ml-10">
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle" class="w-9 h-9 lg:w-10 lg:h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+        <i id="theme-icon" class="fa-regular fa-moon text-base lg:text-lg text-secondary"></i>
+      </button>
+
+      <a href="./src/page/login.html">
+        <button class="px-3 lg:px-5 py-1.5 lg:py-2 text-sm lg:text-base border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
           Login
         </button>
-        </a>
-        
-        <a href="./src/page/register.html">
-        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+      </a>
+
+      <a href="./src/page/register.html">
+        <button class="px-3 lg:px-5 py-1.5 lg:py-2 text-sm lg:text-base bg-primary text-white rounded-md hover:bg-secondary transition">
           Sign Up
         </button>
-        </a>
- 
-      </div>
-      <!-- Mobile Menu Button -->
-      <div class="flex items-center gap-2 md:hidden">
-        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
-          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
-        </button>
-        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+      </a>
     </div>
- 
- 
-    <!-- For mobile devices menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
-      <ul class="flex flex-col text-secondary dark:text-gray-200">
-        <li>
-          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Courses
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Blog
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Library
-          </a>
-        </li>
-        <li>
-          <a href="#" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            About
-          </a>
-        </li>
- 
-      </ul>
- 
-      <div class="flex flex-col gap-3 px-6 py-5">
-        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+
+    <!-- Mobile Menu Button -->
+    <div class="flex items-center gap-2 md:hidden">
+      <button id="theme-toggle-mobile" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+        <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+      </button>
+      <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg w-9 h-9 flex items-center justify-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- For mobile devices menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <ul class="flex flex-col text-secondary dark:text-gray-200">
+      <li>
+        <a href="./src/page/course-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/blog-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/library-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Library
+        </a>
+      </li>
+      <li>
+        <a href="./src/page/about-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          About
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex flex-col gap-3 px-6 py-5">
+      <a href="./src/page/login.html">
+        <button class="w-full border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
           Login
         </button>
- 
-        <button class="bg-primary text-white rounded-md py-2">
+      </a>
+      <a href="./src/page/register.html">
+        <button class="w-full bg-primary text-white rounded-md py-2">
           Sign Up
         </button>
-      </div>
+      </a>
     </div>
-  </nav>
-  
-</header>
+  </div>
+</nav>
 <main >
   <!-- HERO -->
  <section class="relative overflow-hidden px-4 md:mt-20 sm:mt-5">
@@ -140,11 +131,11 @@
   <svg class="iso-decor pointer-events-none select-none hidden md:block absolute right-40 top-40 h-full w-[340px] opacity-70"
        viewBox="0 0 340 460" preserveAspectRatio="xMaxYMin slice" xmlns="http://www.w3.org/2000/svg" id="isoRight"></svg>
  
-  <div class="relative max-w-5xl mx-auto mb-20 text-center ">
-    <h2 class="text-3xl sm:text-5xl font-bold text-primary mt-20">
+  <div class="relative  max-w-5xl mx-auto mb-20 text-center ">
+    <h2 class="text-5xl sm:text-4xl   font-bold text-primary mt-20">
       Master Code
     </h2>
-    <h2 class="text-5xl sm:text-5xl font-bold text-primary mt-2">
+    <h2 class="text-5xl sm:text-4xl font-bold text-primary mt-2">
       Create
       <span class="text-secondary dark:text-secondary-2"> Tomorrow</span>
     </h2>
