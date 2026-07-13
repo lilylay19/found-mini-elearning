@@ -16,119 +16,115 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
-<body class="font-inter bg-slate-50 text-secondary dark:bg-black dark:text-gray-100 transition-colors duration-300">
+<body class="font-inter  text-secondary dark:bg-black dark:text-gray-100 transition-colors duration-300">
   
+  <header>
+   <!-- main nav -->
   <nav id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-black border-b border-secondary-4 dark:border-gray-700 shadow-sm z-50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 ">
-      <!-- Logo -->
-      
-  <a href="/index.html">
-    <!-- Light mode logo -->
-    <img src="../img/logo-light.png" alt="Logo" class="h-10 sm:h-16 w-auto block dark:hidden">
-    <!-- Dark mode logo -->
-    <img src="../img/logo-dark.png" alt="Logo" class="h-12 sm:h-16 w-auto hidden dark:block">
-  </a>
+  <div class="max-w-7xl  flex items-center justify-between px-6 sm:px-8 lg:px-6 py-2  mx-auto ">
+    <!-- Logo -->
+    <a href="/index.html" class="shrink-0">
+      <!-- Light mode logo -->
+      <img src="../img/logo-light.png" alt="Logo" class="h-9 sm:h-12 lg:h-16 w-auto  dark:hidden">
+      <!-- Dark mode logo -->
+      <img src="../img/logo-dark.png" alt="Logo" class="h-9 sm:h-12 lg:h-16 w-auto hidden dark:block">
+    </a>
 
-  <ul class="hidden md:flex items-center gap-15 ml-40 text-secondary dark:text-gray-200 font-medium">
- 
-        <li>
-          <a href="./course-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Courses
-          </a>
-        </li>
- 
-        <li>
-          <a href="./blog-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Blog
-          </a>
-        </li>
- 
-        <li>
-          <a href="./library-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            Library
-          </a>
-        </li>
- 
-        <li>
-          <a href="./about-page.html" class="hover:text-primary dark:hover:text-secondary-2 transition">
-            About
-          </a>
-        </li>
-      </ul>
- 
-      <!-- Right Side Navigation -->
-      <div class="hidden md:flex items-center gap-4">
-        <!-- Dark Mode Toggle -->
-         
-        <button id="theme-toggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
-          <i id="theme-icon" class="fa-regular fa-moon text-lg text-secondary"></i>
-        </button>
-        <a href="./login.html">
-        <button class="px-5 py-2 border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+    <ul class="hidden md:flex ml-40 gap-15 lg:gap-20 xl:gap-17   lg:text-xl text-secondary dark:text-secondary-2 font-semibold">
+      <li>
+        <a href="./course-page.html" class="hover:text-primary  transition">
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="./blog-page.html" class="hover:text-primary dark:transition">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="./library-page.html" class="hover:text-primary  transition">
+          Library
+        </a>
+      </li>
+      <li>
+        <a href="./about-page.html" class="hover:text-primary transition">
+          About
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Side Navigation -->
+    <div class="hidden md:flex  gap-2 lg:gap-4 ml-10">
+      <!-- Dark Mode Toggle -->
+      <button id="theme-toggle" class="w-9 h-9 lg:w-10 lg:h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+        <i id="theme-icon" class="fa-regular fa-moon text-base lg:text-lg text-secondary"></i>
+      </button>
+
+      <a href="./login.html">
+        <button class="px-3 lg:px-5 py-1.5 lg:py-2 text-sm lg:text-base border border-secondary-4 dark:border-gray-600 rounded-md text-secondary dark:text-gray-200 hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
           Login
         </button>
-        </a>
-       
-        
-         <a href="./register.html">
-        <button class="px-5 py-2 bg-primary text-white rounded-md hover:bg-secondary transition">
+      </a>
+
+      <a href="./register.html">
+        <button class="px-3 lg:px-5 py-1.5 lg:py-2 text-sm lg:text-base bg-primary text-white rounded-md hover:bg-secondary transition">
           Sign Up
         </button>
-        </a>
- 
-      </div>
-      <!-- Mobile Menu Button -->
-      <div class="flex items-center gap-2 md:hidden">
-        <button id="theme-toggle-mobile" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
-          <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
-        </button>
-        <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
+      </a>
     </div>
- 
- 
-    <!-- For mobile devices menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black">
-      <ul class="flex flex-col text-secondary dark:text-gray-200">
-        <li>
-          <a href="./course-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Courses
-          </a>
-        </li>
-        <li>
-          <a href="./blog-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Blog
-          </a>
-        </li>
-        <li>
-          <a href="./library-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            Library
-          </a>
-        </li>
-        <li>
-          <a href="./about-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
-            About
-          </a>
-        </li>
- 
-      </ul>
- 
-      <div class="flex flex-col gap-3 px-6 py-5">
-        <a href="./login.html">
-        <button class="border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
+
+    <!-- Mobile Menu Button -->
+    <div class="flex items-center gap-2 md:hidden">
+      <button id="theme-toggle-mobile" class="w-9 h-9 rounded-full flex items-center justify-center hover:bg-secondary-2 dark:hover:bg-gray-700 transition">
+        <i id="theme-icon-mobile" class="fa-regular fa-moon text-lg text-secondary dark:text-secondary-2"></i>
+      </button>
+      <button id="menu-btn" class="text-secondary dark:text-gray-200 text-lg w-9 h-9 flex items-center justify-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- For mobile devices menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-secondary-4 dark:border-gray-700 bg-white dark:bg-black max-h-[calc(100vh-4rem)] overflow-y-auto">
+    <ul class="flex flex-col text-secondary dark:text-gray-200">
+      <li>
+        <a href="./course-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Courses
+        </a>
+      </li>
+      <li>
+        <a href="./blog-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Blog
+        </a>
+      </li>
+      <li>
+        <a href="./library-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          Library
+        </a>
+      </li>
+      <li>
+        <a href="./about-page.html" class="block px-6 py-4 hover:bg-secondary-2 dark:hover:bg-gray-800">
+          About
+        </a>
+      </li>
+    </ul>
+
+    <div class="flex flex-col gap-3 px-6 py-5">
+      <a href="./login.html">
+        <button class="w-full border border-secondary-4 dark:border-gray-600 rounded-md py-2 text-secondary dark:text-gray-200">
           Login
         </button>
-        </a>
-         <a href="./register.html">
-        <button class="bg-primary text-white rounded-md py-2">
+      </a>
+      <a href="./register.html">
+        <button class="w-full bg-primary text-white rounded-md py-2">
           Sign Up
         </button>
-        </a>
-      </div>
+      </a>
     </div>
-  </nav>
+  </div>
+</nav>
+  
+</header>
 
   <main class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-28 pb-6 font-inter">
     <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6 dark:text-gray-400">
@@ -213,7 +209,7 @@
         <div class="flex items-center justify-between p-4 border border-gray-200 rounded-xl bg-white dark:bg-slate-800 dark:border-slate-700">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden">
-              <img src="/images/JohnSmith.jpg" alt="John Smith" class="w-full h-full object-cover">
+              <img src="../img/course-card-image/JohnSmith.jpg" alt="John Smith" class="w-full h-full object-cover">
             </div>
             <div>
               <div class="flex items-center gap-2">
@@ -426,7 +422,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/javascriptlogo.png" alt="JavaScript" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/javascriptlogo.png" alt="JavaScript" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">JavaScript Essentials for Beginners</h4>
@@ -439,7 +439,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/Pythonlogo.png" alt="Python" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/Pythonlogo.png" alt="Python" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">Python for Everybody Specialization</h4>
@@ -452,7 +456,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/Cprogramminglogo.png" alt="C++" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/Cprogramminglogo.png" alt="C++" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">C++ Programming Masterclass</h4>
@@ -465,7 +473,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/DataStructureLogo.png" alt="Data Structures & Algorithms" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/DataStructureLogo.png" alt="Data Structures & Algorithms" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">Data Structure &amp; Algorithm in Java</h4>
@@ -478,7 +490,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/Springbootlogo.png" alt="Spring Boot" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/Springbootlogo.png" alt="Spring Boot" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">Spring Boot Fundamentals with Java</h4>
@@ -491,7 +507,11 @@
             <div class="flex items-center justify-between gap-2 group cursor-pointer">
               <div class="flex items-center gap-2.5">
                 <div class="w-9 h-9 rounded-lg overflow-hidden shrink-0">
+<<<<<<< HEAD
                   <img src="../img/course/Mysqllogo.png" alt="MySQL" class="w-full h-full object-cover">
+=======
+                  <img src="../img/course-card-image/Mysqllogo.png" alt="MySQL" class="w-full h-full object-cover">
+>>>>>>> eff8283fe9bb6a8fcc3ba17df46a21fa7dbb1195
                 </div>
                 <div>
                   <h4 class="text-xs font-semibold text-secondary group-hover:text-primary transition line-clamp-1 dark:text-gray-200">Database Management with MySQL</h4>
